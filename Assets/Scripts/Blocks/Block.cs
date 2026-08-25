@@ -8,12 +8,12 @@ public class Block : MonoBehaviour
 
     public BiomeType biomeType;
 
-
+    /*
     public void generateBlock(int id)
     {
         blockID = id;
         // Additional logic to generate the block based on the ID can be added here
-    }
+    }*/
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
