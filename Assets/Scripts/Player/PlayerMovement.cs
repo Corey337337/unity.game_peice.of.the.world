@@ -6,8 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
 
     [Header("Параметры камеры")]
-    public Camera camera;
-    //public float z_position;
+    public Camera CameraObject;
 
     public void Movement()
     {
@@ -18,13 +17,12 @@ public class PlayerMovement : MonoBehaviour
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
         
     }
-
+    
     public void CameraMovement()
     {
         Vector3 x_y_position = transform.position;
-        //Debug.Log(x_y_position);
         x_y_position.z = -10f;
-        camera.transform.position = x_y_position;
+        CameraObject.transform.position = x_y_position;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
