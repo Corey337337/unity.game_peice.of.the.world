@@ -1,14 +1,15 @@
 using UnityEngine;
 
-public class Block : MonoBehaviour
+public class World : MonoBehaviour
 {
-    public string blockName;
+    public Chunk chunk;
+    public Generation generation;
 
-    public int blockID;
+    public void CheckChunks()
+    {
 
-    //public BiomeType biomeType;
+    }
 
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

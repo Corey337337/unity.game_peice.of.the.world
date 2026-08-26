@@ -34,13 +34,6 @@ public class PlayerMovement : MonoBehaviour
         CameraObject.transform.position = x_y_position;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Movement();

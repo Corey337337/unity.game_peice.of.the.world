@@ -3,20 +3,22 @@ using System.Collections.Generic;
 
 public class Chunk : MonoBehaviour
 {
+    public Vector2Int chunkPosition;
     public int height;
     public int width;
 
-    public List<Block> blocksInChunk;//не знаю нужно ли вообще чанку знать о своих блоках. это какбудто бессмысленно
+    public List<Block> blocksInChunk;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public void GenerateChunk(Generation generation)
     {
-        
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                Instantiate(generation.GenerateBlocksInChunk(), new Vector3(i, j, 0), Quaternion.identity, transform);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
