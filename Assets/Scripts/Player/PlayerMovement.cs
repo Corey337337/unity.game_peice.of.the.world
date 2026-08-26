@@ -13,6 +13,15 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
+        if(x == -1)
+        {
+            transform.rotation = Quaternion.Euler(0, -180, 0);
+        }
+        else if (x == 1)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
         Vector2 direction = new Vector2 (x, y).normalized;
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
         
