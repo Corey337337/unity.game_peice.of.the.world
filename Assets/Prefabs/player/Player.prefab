@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5433539929238771869}
   - component: {fileID: -376932292422576488}
   - component: {fileID: 179072552017861688}
+  - component: {fileID: 3168953165042933349}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -181,3 +182,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 2.5
   CameraObject: {fileID: 5449160416664200982, guid: d3af1a1bcf3028a4790f4d0adf33cec6, type: 3}
+--- !u!114 &3168953165042933349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510766318062383384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7783eb8922f25a48b3d0d54ea5d9196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLocation
