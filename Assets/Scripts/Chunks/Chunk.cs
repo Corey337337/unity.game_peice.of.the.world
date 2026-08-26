@@ -10,13 +10,15 @@ public class Chunk : MonoBehaviour
     public List<Block> blocksInChunk;
 
 
-    public void GenerateChunk(Generation generation)
+    public void GenerateChunk(Generator generation)
     {
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)
             {
-                Instantiate(generation.GenerateBlocksInChunk(), new Vector3(i, j, 0), Quaternion.identity, transform);
+                var block = Instantiate(generation.GenerateBlocksInChunk(), transform);
+                block.transform.localPosition = new Vector3(i, j, 0);
+                block.transform.localRotation = Quaternion.identity;
             }
         }
     }
