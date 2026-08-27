@@ -225,7 +225,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 2.7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -265,8 +265,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 519591074}
-  - component: {fileID: 519591073}
   - component: {fileID: 519591075}
+  - component: {fileID: 519591073}
   m_Layer: 0
   m_Name: chunkObject
   m_TagString: Untagged
@@ -741,8 +741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Generator
   possibleBlocks:
   - {fileID: 802048014}
-  - {fileID: 1158777243}
   - {fileID: 1233738603}
+  - {fileID: 1158777243}
   - {fileID: 996984402}
 --- !u!1001 &1386087833
 PrefabInstance:
