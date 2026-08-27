@@ -74,6 +74,26 @@ public class World : MonoBehaviour
                 ListChunks.Add(c);
             }
         }
+        DeleteChunks(spisok);
+    }
+
+    private List<Chunk> chunksToDelete = new List<Chunk>();
+    public void DeleteChunks(List<Vector2Int> spisok)
+    {
+        foreach (var c in ListChunks)
+        {
+            if (!spisok.Contains(c.chunkPosition))
+            {
+                chunksToDelete.Add(c);
+            }
+        }
+
+        foreach (var c in chunksToDelete)
+        {
+            ListChunks.Remove(c);
+            Destroy(c.gameObject);
+        }
+        chunksToDelete.Clear();
     }
 
    
