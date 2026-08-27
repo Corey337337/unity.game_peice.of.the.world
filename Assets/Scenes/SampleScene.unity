@@ -225,7 +225,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.7
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -453,7 +453,7 @@ Transform:
   m_GameObject: {fileID: 590431210}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.610001, y: 5.4200006, z: 0}
+  m_LocalPosition: {x: -28.96, y: 5.4200006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,13 +822,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: sand
       objectReference: {fileID: 0}
+    - target: {fileID: 2027094514218800202, guid: 7d0b128ad2a05224ebd601870358b148, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2667785074683663824, guid: 7d0b128ad2a05224ebd601870358b148, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1888613682}
     - target: {fileID: 3471183716027229283, guid: 7d0b128ad2a05224ebd601870358b148, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.6000004
+      value: -22.949999
       objectReference: {fileID: 0}
     - target: {fileID: 3471183716027229283, guid: 7d0b128ad2a05224ebd601870358b148, type: 3}
       propertyPath: m_LocalPosition.y
@@ -883,13 +887,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass
       objectReference: {fileID: 0}
+    - target: {fileID: 1719913044311765363, guid: ee2622990924e764a8dbaf6206f4ea20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1955708359676279640, guid: ee2622990924e764a8dbaf6206f4ea20, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1888613682}
     - target: {fileID: 7649203021157036742, guid: ee2622990924e764a8dbaf6206f4ea20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.64
+      value: -26.989998
       objectReference: {fileID: 0}
     - target: {fileID: 7649203021157036742, guid: ee2622990924e764a8dbaf6206f4ea20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -942,7 +950,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1079501720676861128, guid: 80d8c2d4dc93c644eb6c6b94de211234, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7400002
+      value: -21.089998
       objectReference: {fileID: 0}
     - target: {fileID: 1079501720676861128, guid: 80d8c2d4dc93c644eb6c6b94de211234, type: 3}
       propertyPath: m_LocalPosition.y
@@ -988,6 +996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: snow
       objectReference: {fileID: 0}
+    - target: {fileID: 8202130641473328523, guid: 80d8c2d4dc93c644eb6c6b94de211234, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1009,9 +1021,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: water
       objectReference: {fileID: 0}
+    - target: {fileID: 5579296513571937561, guid: f6b12dc7d697bad4ba98a38d84b50bb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7340955417099784291, guid: f6b12dc7d697bad4ba98a38d84b50bb9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.61
+      value: -24.96
       objectReference: {fileID: 0}
     - target: {fileID: 7340955417099784291, guid: f6b12dc7d697bad4ba98a38d84b50bb9, type: 3}
       propertyPath: m_LocalPosition.y
