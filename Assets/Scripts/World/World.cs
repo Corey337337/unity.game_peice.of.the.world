@@ -1,7 +1,9 @@
 using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 using UnityEngine.Audio;
+using static UnityEngine.Rendering.DebugUI;
 
 public class World : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class World : MonoBehaviour
     private Vector2Int PreviousChunk;
     private List<Chunk> ListChunks = new List<Chunk>();
 
+    private Dictionary<Vector2Int, int[]> existingСhunks = new Dictionary<Vector2Int, int[]>();
 
 
     public Vector2Int GetCurrentChunk()
@@ -59,7 +62,7 @@ public class World : MonoBehaviour
         return false;
     }
 
-    public void SvuazZveno()//временное название
+    public void GenerateNewChunks() //необходимо зафиксировать данные в словарь 
     {
         List<Vector2Int> spisok = GetNeighboursCords();
 
@@ -67,18 +70,54 @@ public class World : MonoBehaviour
         {
             if (!IsChunkExists(cord))
             {
+                //создается оболочка чанка
                 var c = Instantiate(chunk, new Vector3(cord.x * chunk.width, cord.y * chunk.height, 0), Quaternion.identity, transform);
+                //затем этой оболочке присваиваются координаты
                 c.chunkPosition = cord;
-                c.GenerateChunk(generator);
 
+                //начну писать логику тут но потом если необходимо будет создам новый метод
+                if (existingСhunks.ContainsKey(cord))
+                {
+                    int[] ids = existingСhunks[cord];
+
+                    //Debug.Log(string.Join(", ", ids));
+                    int index = 0;
+                    for (int i = 0; i < c.width; i++)
+                    {
+                        for (int j = 0; j < c.height; j++)
+                        {
+                            var block = Instantiate(generator.possibleBlocks[ids[index]], c.transform);
+                            block.transform.localPosition = new Vector3(i, j, 0);
+                            block.transform.localRotation = Quaternion.identity;
+
+                            c.blocksInChunk.Add(block);
+                            index++;
+                        }
+                    }
+                }
+                else
+                {
+                    //создаем новый и добавляем в словарь
+                    c.GenerateChunk(generator);//создаем новый
+
+                    int[] ids = new int[c.height * c.width];
+                    for (int i = 0; i < c.blocksInChunk.Count; i++)
+                    {
+                        ids[i] = c.blocksInChunk[i].blockID;
+                    }
+                    existingСhunks.Add(cord, ids);//добавляем в словарь
+                }
+                
+                //c.GenerateChunk(generator);//это надо убрать потом 
+               
                 ListChunks.Add(c);
             }
         }
-        DeleteChunks(spisok);
+        DeleteChunks(spisok);//мы передаем список не того что нужно удалить а то с чем сравнивать
     }
 
     private List<Chunk> chunksToDelete = new List<Chunk>();
-    public void DeleteChunks(List<Vector2Int> spisok)
+    public void DeleteChunks(List<Vector2Int> spisok) //необходимо зафиксировать данные в словарь ?????или нет?????
     {
         foreach (var c in ListChunks)
         {
@@ -97,7 +136,7 @@ public class World : MonoBehaviour
     }
 
    
-    public void BuildWorld()
+    public void BuildWorld()//необходимо зафиксировать данные в словарь 
     {
         for (int i = 0; i < visibleWorldSize; i++)
         {
@@ -108,6 +147,14 @@ public class World : MonoBehaviour
                 c.chunkPosition = new Vector2Int(i, j);
 
                 c.GenerateChunk(generator);
+
+                int[] ids = new int[c.height * c.width];
+
+                for (int k = 0; k < c.blocksInChunk.Count; k++)
+                {
+                    ids[k] = c.blocksInChunk[k].blockID;
+                }
+                existingСhunks.Add(c.chunkPosition, ids);
 
                 ListChunks.Add(c);
             }
@@ -134,7 +181,7 @@ public class World : MonoBehaviour
             PreviousChunk = CurrentChunk;
             CurrentChunk = newChunk;
 
-            SvuazZveno();
+            GenerateNewChunks();
           
         }
     }
