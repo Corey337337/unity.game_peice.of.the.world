@@ -19,6 +19,8 @@ public class Chunk : MonoBehaviour
                 var block = Instantiate(generation.GenerateBlocksInChunk(), transform);
                 block.transform.localPosition = new Vector3(i, j, 0);
                 block.transform.localRotation = Quaternion.identity;
+
+                blocksInChunk.Add(block);
             }
         }
     }
