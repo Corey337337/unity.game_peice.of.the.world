@@ -153,8 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Block
   blockName: Water
-  blockID: 2
-  biomeType: 4
+  blockID: 1
 --- !u!114 &-4318312049148698990
 MonoBehaviour:
   m_ObjectHideFlags: 0

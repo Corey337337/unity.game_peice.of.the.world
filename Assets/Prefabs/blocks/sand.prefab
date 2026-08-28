@@ -153,8 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Block
   blockName: sand
-  blockID: 1
-  biomeType: 2
+  blockID: 2
 --- !u!114 &2667785074683663824
 MonoBehaviour:
   m_ObjectHideFlags: 0
