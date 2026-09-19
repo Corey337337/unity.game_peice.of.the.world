@@ -16,7 +16,10 @@ public class Chunk : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                var block = Instantiate(generation.GenerateBlocksInChunk(), transform);
+                int globalX = chunkPosition.x * width + i;
+                int globalY = chunkPosition.y * height + j;
+
+                var block = Instantiate(generation.GenerateBlocksInChunk(globalX, globalY), transform);
                 block.transform.localPosition = new Vector3(i, j, 0);
                 block.transform.localRotation = Quaternion.identity;
 
