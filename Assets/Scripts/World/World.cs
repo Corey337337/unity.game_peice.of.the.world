@@ -117,7 +117,7 @@ public class World : MonoBehaviour
     }
 
     private List<Chunk> chunksToDelete = new List<Chunk>();
-    public void DeleteChunks(List<Vector2Int> spisok) //необходимо зафиксировать данные в словарь ?????или нет?????
+    public void DeleteChunks(List<Vector2Int> spisok)
     {
         foreach (var c in ListChunks)
         {
