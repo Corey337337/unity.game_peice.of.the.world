@@ -19,7 +19,7 @@ public class World : MonoBehaviour
     private Vector2Int PreviousChunk;
     private List<Chunk> ListChunks = new List<Chunk>();
 
-    private Dictionary<Vector2Int, int[]> existingСhunks = new Dictionary<Vector2Int, int[]>();
+    //private Dictionary<Vector2Int, int[]> existingСhunks = new Dictionary<Vector2Int, int[]>();
 
 
     public Vector2Int GetCurrentChunk()
@@ -62,7 +62,7 @@ public class World : MonoBehaviour
         return false;
     }
 
-    public void GenerateNewChunks() //необходимо зафиксировать данные в словарь 
+    public void GenerateNewChunks()
     {
         List<Vector2Int> spisok = GetNeighboursCords();
 
@@ -75,6 +75,11 @@ public class World : MonoBehaviour
                 //затем этой оболочке присваиваются координаты
                 c.chunkPosition = cord;
 
+                c.GenerateChunk(generator);
+
+                ListChunks.Add(c);
+
+                /*
                 //начну писать логику тут но потом если необходимо будет создам новый метод
                 if (existingСhunks.ContainsKey(cord))
                 {
@@ -105,12 +110,12 @@ public class World : MonoBehaviour
                     {
                         ids[i] = c.blocksInChunk[i].blockID;
                     }
-                    existingСhunks.Add(cord, ids);//добавляем в словарь
-                }
-                
+                    //existingСhunks.Add(cord, ids);//добавляем в словарь (не надо)
+                }*/
+
                 //c.GenerateChunk(generator);//это надо убрать потом 
-               
-                ListChunks.Add(c);
+
+
             }
         }
         DeleteChunks(spisok);//мы передаем список не того что нужно удалить а то с чем сравнивать
@@ -136,7 +141,7 @@ public class World : MonoBehaviour
     }
 
    
-    public void BuildWorld()//необходимо зафиксировать данные в словарь 
+    public void BuildWorld()
     {
         for (int i = 0; i < visibleWorldSize; i++)
         {
@@ -147,14 +152,14 @@ public class World : MonoBehaviour
                 c.chunkPosition = new Vector2Int(i, j);
 
                 c.GenerateChunk(generator);
-
+                /*
                 int[] ids = new int[c.height * c.width];
 
                 for (int k = 0; k < c.blocksInChunk.Count; k++)
                 {
                     ids[k] = c.blocksInChunk[k].blockID;
                 }
-                existingСhunks.Add(c.chunkPosition, ids);
+                existingСhunks.Add(c.chunkPosition, ids);*/
 
                 ListChunks.Add(c);
             }
