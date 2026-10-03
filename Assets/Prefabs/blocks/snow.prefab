@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4006462227503839828}
   - component: {fileID: 3117426644370072327}
   - component: {fileID: 6802044317011957382}
+  - component: {fileID: -3273480160510181238}
   m_Layer: 0
   m_Name: snow
   m_TagString: Untagged
@@ -154,7 +155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Block
   blockName: Snow
   blockID: 3
-  biomeType: 3
 --- !u!114 &6802044317011957382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,3 +169,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
   forceSpeed: 1.5
   player: {fileID: 0}
+--- !u!114 &-3273480160510181238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202130641473328523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9e85193c4e5704988c8237daaeea0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
+  posibleProps: []
+  spawnChance: 0
