@@ -1,5 +1,6 @@
-using UnityEngine;
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
@@ -7,8 +8,9 @@ public class Chunk : MonoBehaviour
     public int height;
     public int width;
 
-    public List<Block> blocksInChunk;
+    public event Action OnChunkSpawn;
 
+    public List<Block> blocksInChunk;
 
     public void GenerateChunk(Generator generation)
     {
@@ -23,9 +25,14 @@ public class Chunk : MonoBehaviour
                 block.transform.localPosition = new Vector3(i, j, 0);
                 block.transform.localRotation = Quaternion.identity;
 
+                //вот что я жоско добавил
+                OnChunkSpawn += block.GetComponent<PropSpawner>().SpawnProp;
+
                 blocksInChunk.Add(block);
+
             }
         }
+        OnChunkSpawn?.Invoke();
     }
 
 }
