@@ -8,7 +8,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class World : MonoBehaviour
 {
     [Header("Данные")]
-    public int visibleWorldSize;//сколько чанков существует (3*3 = 9)
+    public int visibleWorldSize;
 
     [Header("Объекты")]
     public GameObject player;

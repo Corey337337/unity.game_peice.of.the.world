@@ -29,12 +29,14 @@ public class Generator : MonoBehaviour
 
     public Block GetBlockByNoise(float value)
     {
-        if (value < 0.3)
+        if (value < 0.15)//0.3
             return possibleBlocks[1];
-        else if (value < 0.4)
+        else if (value < 0.2)//0.4
             return possibleBlocks[2];
-        else if (value < 0.75)
+        else if (value < 0.57)//0.75
             return possibleBlocks[0];
+        else if (value < 0.7)
+            return possibleBlocks[4];
         else
             return possibleBlocks[3];
 
