@@ -5,6 +5,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Характеристики игрока")]
     public float speed;
 
+    [SerializeField] public SpriteRenderer spriteRenderer;
+
+    public Vector2 LastDirection = Vector2.right;
+
     [Header("Параметры камеры")]
     public Camera CameraObject;
 
@@ -13,6 +17,27 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
+        Vector2 direction = new Vector2(x, y).normalized;
+
+        if (direction != Vector2.zero)
+        {
+            LastDirection = direction;
+        }
+            
+
+        if (x != 0)
+        {
+            if (x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                spriteRenderer.flipX = false;
+            }
+
+        }
+        /*
         if(x == -1)
         {
             transform.rotation = Quaternion.Euler(0, -180, 0);
@@ -20,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
         else if (x == 1)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+        }*/
 
-        Vector2 direction = new Vector2 (x, y).normalized;
+
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
         
     }
