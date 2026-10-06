@@ -1,29 +1,28 @@
 using UnityEngine;
 
-public class AttackComponent : MonoBehaviour
+public class AttackAimComponent : MonoBehaviour
 {
+
     public GameObject AttackZone;
 
     public float zoneDistance;
 
-    private PlayerMovement pm;
-
+    private MoverComponent mover;
 
     public void Awake()
     {
-        pm = GetComponent<PlayerMovement>();
+        mover = GetComponent<MoverComponent>();
     }
 
-    public void Attack()
+    public void AimZoneWork()
     {
-        Vector2 dir = pm.LastDirection;
+        Vector2 dir = mover.LastDirection;
 
         AttackZone.transform.localPosition = dir * zoneDistance;
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         AttackZone.transform.localRotation = Quaternion.Euler(0, 0, angle);
-
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,10 +34,6 @@ public class AttackComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Attack();
-        }
         
     }
 }

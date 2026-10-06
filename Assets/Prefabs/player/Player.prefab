@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 2368029256747402338}
   - component: {fileID: 5433539929238771869}
   - component: {fileID: -376932292422576488}
-  - component: {fileID: 179072552017861688}
-  - component: {fileID: 3864698088138108816}
+  - component: {fileID: 7703452510016157780}
+  - component: {fileID: -7614855223736957158}
+  - component: {fileID: 8393101387515345981}
+  - component: {fileID: 1898805800497719969}
   - component: {fileID: 3168953165042933349}
   m_Layer: 0
   m_Name: Player
@@ -170,7 +172,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6486511, y: 0.67273897}
   m_EdgeRadius: 0
---- !u!114 &179072552017861688
+--- !u!114 &7703452510016157780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,14 +181,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 510766318062383384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a52e4ff0065ce2408f9ef95d5c799d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cc5f399fb3a7a9479e530b46cc6a684, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+  mover: {fileID: 8393101387515345981}
+  aim: {fileID: 1898805800497719969}
+--- !u!114 &-7614855223736957158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510766318062383384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
+  health: 20
+--- !u!114 &8393101387515345981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510766318062383384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7136ecb3041097b42b0c3b73dd571b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoverComponent
   speed: 2.5
-  spriteRenderer: {fileID: 2368029256747402338}
+  spriteRenderer: {fileID: 0}
   LastDirection: {x: 1, y: 0}
-  CameraObject: {fileID: 5449160416664200982, guid: d3af1a1bcf3028a4790f4d0adf33cec6, type: 3}
---- !u!114 &3864698088138108816
+  direction: {x: 0, y: 0}
+--- !u!114 &1898805800497719969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,9 +224,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 510766318062383384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929cbaab5a9333747b8b50c4e6da0537, type: 3}
+  m_Script: {fileID: 11500000, guid: 65153b2249f48fa4196012c262777452, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttackComponent
+  m_EditorClassIdentifier: Assembly-CSharp::AttackAimComponent
   AttackZone: {fileID: 6407971595694794108}
   zoneDistance: 6
 --- !u!114 &3168953165042933349

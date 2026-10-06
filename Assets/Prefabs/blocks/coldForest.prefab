@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
   forceSpeed: 2.5
-  player: {fileID: 0}
+  player: {fileID: 510766318062383384, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
 --- !u!114 &-1576376515573226511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,5 +181,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9e85193c4e5704988c8237daaeea0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
-  posibleProps: []
+  possibleProps: []
   spawnChance: 0

@@ -8,7 +8,7 @@ public class SurfaceComponent : MonoBehaviour
 
     public void ApplyForceSpeed()
     {
-        player.GetComponent<PlayerMovement>().speed = forceSpeed;
+        player.GetComponent<MoverComponent>().speed = forceSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
