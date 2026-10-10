@@ -104,7 +104,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5649510751593281751}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -131,17 +131,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0000038146973, y: 0.042924643}
+  m_Offset: {x: -0.0000038146973, y: 0.2324655}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.3828868, y: 0.1209588}
+    pivot: {x: 0.38288677, y: 0.04055611}
     oldSize: {x: 0.87741935, y: 0.67096776}
     newSize: {x: 3.509091, y: 6.109091}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.2543373, y: 0.2563243}
+  m_Size: {x: 0.4698906, y: 0.4272828}
   m_EdgeRadius: 0
 --- !u!114 &-3784624950704609982
 MonoBehaviour:
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  health: 10
+  health: 15
 --- !u!114 &3907537520298768139
 MonoBehaviour:
   m_ObjectHideFlags: 0

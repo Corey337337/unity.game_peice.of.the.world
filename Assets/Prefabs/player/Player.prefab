@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 2618158217957714877}
   - component: {fileID: 2368029256747402338}
   - component: {fileID: 5433539929238771869}
+  - component: {fileID: -7614855223736957158}
   - component: {fileID: -376932292422576488}
   - component: {fileID: 7703452510016157780}
-  - component: {fileID: -7614855223736957158}
   - component: {fileID: 8393101387515345981}
+  - component: {fileID: 7368192163941822749}
   - component: {fileID: 1898805800497719969}
   - component: {fileID: 3168953165042933349}
   m_Layer: 0
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 510766318062383384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.96546, y: 1.03998, z: 0}
+  m_LocalPosition: {x: 2.96546, y: -0.362, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -126,6 +127,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &-7614855223736957158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510766318062383384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
+  health: 20
 --- !u!61 &-376932292422576488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160,17 +174,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.010350674, y: -0.28164363}
+  m_Offset: {x: -0.0022277832, y: 2.458121}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4566741, y: 0.07159591}
+    pivot: {x: 0.45976877, y: 0.021822818}
     oldSize: {x: 3.509091, y: 6.109091}
     newSize: {x: 1.93, y: 3.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5994134, y: 0.46838677}
+  m_Size: {x: 2.6913118, y: 3.4908376}
   m_EdgeRadius: 0
 --- !u!114 &7703452510016157780
 MonoBehaviour:
@@ -186,19 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   mover: {fileID: 8393101387515345981}
   aim: {fileID: 1898805800497719969}
---- !u!114 &-7614855223736957158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510766318062383384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  health: 20
+  attacker: {fileID: 7368192163941822749}
 --- !u!114 &8393101387515345981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +217,21 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   LastDirection: {x: 1, y: 0}
   direction: {x: 0, y: 0}
+--- !u!114 &7368192163941822749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510766318062383384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a461589db7ff7794b9d412757696c577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackComponent
+  damage: 5
+  cooldown: 1.2
+  activeTime: 0.1
 --- !u!114 &1898805800497719969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackAimComponent
   AttackZone: {fileID: 6407971595694794108}
-  zoneDistance: 6
+  zoneDistance: 5
+  originOffset: {x: 0, y: 2}
 --- !u!114 &3168953165042933349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +286,7 @@ Transform:
   m_GameObject: {fileID: 6407971595694794108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: -0.45, z: 0}
+  m_LocalPosition: {x: 5, y: 2, z: 0}
   m_LocalScale: {x: 6.666666, y: 6.666666, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,7 +322,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -320,11 +338,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.08103877, y: 0.77904}
-      - {x: -0.51430386, y: 0.49627763}
+    - - {x: 0.31791094, y: 0.4785286}
+      - {x: -0.08103877, y: 0.77904}
+      - {x: -0.49740714, y: 0.5131746}
       - {x: -0.49505827, y: -0.470472}
-      - {x: -0.027029514, y: -0.77892303}
-      - {x: 0.5157897, y: 0.019140186}
+      - {x: -0.052374844, y: -0.77892303}
+      - {x: 0.2900341, y: -0.5007986}
+      - {x: 0.4007708, y: 0.002243232}
   m_UseDelaunayMesh: 1
 --- !u!212 &1484018285770574521
 SpriteRenderer:
