@@ -14,7 +14,7 @@ public class MobsWalkBehaviour : MonoBehaviour
     {
         int randomX = Random.Range(-1, 2);
         int randomY = Random.Range(-1, 2);
-        Debug.Log($"x = {randomX}, y = {randomY}");
+        //Debug.Log($"x = {randomX}, y = {randomY}");
         Vector2 dir = new Vector2(randomX, randomY);
         mover.SetDirection(dir);
         
@@ -26,7 +26,7 @@ public class MobsWalkBehaviour : MonoBehaviour
         isWalking = true;
         chooseWay();
         walkDuration = Random.Range(4, 11);
-        Debug.Log($"ходит - {walkDuration} сек");
+        //Debug.Log($"ходит - {walkDuration} сек");
         yield return new WaitForSeconds(walkDuration);
         mover.SetDirection(new Vector2(0,0));
         yield return new WaitForSeconds(1f);

@@ -6,7 +6,7 @@ public class PlayerInput : MonoBehaviour
 
     public AttackAimComponent aim;
 
-    //public AttackComponent attacker;//новый
+    public AttackComponent attacker;//новый
 
     public void MovementInput()
     {
@@ -20,7 +20,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             aim.AimZoneWork();
-            //attacker.TryAttack();
+            attacker.TryAttack();
         }
         
     }

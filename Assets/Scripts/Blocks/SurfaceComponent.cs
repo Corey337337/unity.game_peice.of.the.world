@@ -11,12 +11,13 @@ public class SurfaceComponent : MonoBehaviour
         player.GetComponent<MoverComponent>().speed = forceSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*
+    private void On TriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == player)
         {
             ApplyForceSpeed();
         }
-    }
+    }*/
 
 }
