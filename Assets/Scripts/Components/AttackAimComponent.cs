@@ -7,6 +7,8 @@ public class AttackAimComponent : MonoBehaviour
 
     public float zoneDistance;
 
+    public Vector2 originOffset;
+
     private MoverComponent mover;
 
     public void Awake()
@@ -18,7 +20,7 @@ public class AttackAimComponent : MonoBehaviour
     {
         Vector2 dir = mover.LastDirection;
 
-        AttackZone.transform.localPosition = dir * zoneDistance;
+        AttackZone.transform.localPosition = originOffset + dir * zoneDistance;
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
