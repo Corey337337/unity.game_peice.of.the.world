@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Block : MonoBehaviour
 {
@@ -6,18 +7,18 @@ public class Block : MonoBehaviour
 
     public int blockID;
 
-    //public BiomeType biomeType;
+    public List<Spawner> spawners; //для того чтобы было удобно подписывать спавнеры блоков в момент генерации чанка
 
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    //public BiomeType biomeType; //откажусь пожалуй
 
-    // Update is called once per frame
-    void Update()
+    public float globalX;
+    public float globalY;
+
+    /*
+    public Vector2 getPosition()
     {
-        
-    }
+        return new Vector2(globalX, globalY);
+    }*/
+
+   
 }

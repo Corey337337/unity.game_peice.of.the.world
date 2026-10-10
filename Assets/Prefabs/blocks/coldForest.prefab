@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6787455110904028623}
   - component: {fileID: 824111783947575719}
   - component: {fileID: -1576376515573226511}
+  - component: {fileID: 1799670476989822995}
   m_Layer: 0
   m_Name: coldForest
   m_TagString: Untagged
@@ -183,3 +184,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
   possibleProps: []
   spawnChance: 0
+--- !u!114 &1799670476989822995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838991436643142505}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5022a0fecd6e9d844961c5b72eacd7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobSpawner
+  possibleMobs:
+  - {fileID: 0}
+  spawnChance: 0.05

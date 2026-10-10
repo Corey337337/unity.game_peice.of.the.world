@@ -9,14 +9,14 @@ public class PropSpawner : MonoBehaviour
     public float spawnChance;
 
 
-    public void SpawnProp()
+    public void Spawn()
     {
         if (possibleProps.Count <= 0)
         {
             return;
         }
-        float randNum = Random.Range(0f, 1f);
-        if (randNum <= spawnChance)
+
+        if (checkChance())
         {
             int randomProp = Random.Range(0, possibleProps.Count);
             possibleProps[randomProp].gameObject.SetActive(true);
@@ -24,15 +24,18 @@ public class PropSpawner : MonoBehaviour
         
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public bool checkChance()
     {
-        
+        float randNum = Random.Range(0f, 1f);
+        if (randNum <= spawnChance)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

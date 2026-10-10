@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6080807425761929137}
   - component: {fileID: 2667785074683663824}
   - component: {fileID: 8297463584696331018}
+  - component: {fileID: 3376509345107136871}
   m_Layer: 0
   m_Name: sand
   m_TagString: Untagged
@@ -183,3 +184,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
   possibleProps: []
   spawnChance: 0
+--- !u!114 &3376509345107136871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027094514218800202}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5022a0fecd6e9d844961c5b72eacd7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobSpawner
+  possibleMobs:
+  - {fileID: 0}
+  spawnChance: 0.05

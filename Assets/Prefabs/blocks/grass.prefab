@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -7092400439968765820}
   - component: {fileID: 6333937746104880170}
   - component: {fileID: 1955708359676279640}
-  - component: {fileID: 1833132806452534979}
+  - component: {fileID: 7190286183424905519}
+  - component: {fileID: 4775594613562358226}
   m_Layer: 0
   m_Name: grass
   m_TagString: Untagged
@@ -157,6 +158,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Block
   blockName: Grass
   blockID: 0
+  spawners:
+  - {fileID: 7190286183424905519}
+  - {fileID: 4775594613562358226}
+  globalX: 0
+  globalY: 0
 --- !u!114 &1955708359676279640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
   forceSpeed: 2.5
   player: {fileID: 510766318062383384, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
---- !u!114 &1833132806452534979
+--- !u!114 &7190286183424905519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,13 +186,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719913044311765363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9e85193c4e5704988c8237daaeea0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
-  possibleProps:
-  - {fileID: 4101158509255528953}
-  - {fileID: 4016428199072723756}
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  possibleItems:
+  - {fileID: 6426990437827794399, guid: 99ae159559805334681ddead28a1a341, type: 3}
+  - {fileID: 6217868109203044403, guid: 6e5ea312013670342863de5259fce25d, type: 3}
   spawnChance: 0.1
+  block: {fileID: 6333937746104880170}
+--- !u!114 &4775594613562358226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719913044311765363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  possibleItems:
+  - {fileID: 5649510751593281751, guid: bd3d795b75029fa4f98d2806a3dc3c33, type: 3}
+  spawnChance: 0.03
+  block: {fileID: 6333937746104880170}
 --- !u!1 &6882485619932997374
 GameObject:
   m_ObjectHideFlags: 0

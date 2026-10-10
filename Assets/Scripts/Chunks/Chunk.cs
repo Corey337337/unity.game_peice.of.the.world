@@ -22,11 +22,19 @@ public class Chunk : MonoBehaviour
                 int globalY = chunkPosition.y * height + j;
 
                 var block = Instantiate(generation.GenerateBlocksInChunk(globalX, globalY), transform);
+                block.globalX = globalX;
+                block.globalY = globalY;
                 block.transform.localPosition = new Vector3(i, j, 0);
                 block.transform.localRotation = Quaternion.identity;
 
-                //вот что я жоско добавил
-                OnChunkSpawn += block.GetComponent<PropSpawner>().SpawnProp;
+
+                foreach (var s in block.spawners)//теперь происходит подписка всех спавнеров блока
+                {
+                    OnChunkSpawn += s.Spawn;
+                }
+                //а не как тут (каждый отдельно)
+                //OnChunkSpawn += block.GetComponent<PropSpawner>().Spawn;
+                //OnChunkSpawn += block.GetComponent<MobSpawner>().Spawn;
 
                 blocksInChunk.Add(block);
 

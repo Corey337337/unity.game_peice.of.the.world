@@ -21,15 +21,37 @@ public class World : MonoBehaviour
 
     //private Dictionary<Vector2Int, int[]> existingСhunks = new Dictionary<Vector2Int, int[]>();
 
+    public static World Instance;
+    void Awake() 
+    { 
+        Instance = this; 
+    }
 
     public Vector2Int GetCurrentChunk()
     {
+        
         int x = Mathf.FloorToInt(player.transform.position.x / chunk.width);
         int y = Mathf.FloorToInt(player.transform.position.y / chunk.height);
 
         return new Vector2Int(x, y);
+        //return GetChunkAt(player.transform.position);
     }
 
+
+    public bool HasChanckAt(Vector3 pos)
+    {
+        int x = Mathf.FloorToInt(pos.x / chunk.width);
+        int y = Mathf.FloorToInt(pos.y / chunk.height);
+        return IsChunkExists(new Vector2Int(x, y));
+    }
+
+    /*
+    public Vector2Int GetChunkAt(Vector3 pos)
+    {
+        int x = Mathf.FloorToInt(pos.x / chunk.width);
+        int y = Mathf.FloorToInt(pos.y / chunk.height);
+        return new Vector2Int(x, y);
+    }*/
 
     public List<Vector2Int> GetNeighboursCords()
     {
