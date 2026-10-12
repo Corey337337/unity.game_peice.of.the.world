@@ -1,7 +1,7 @@
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class MobAggressiveBehavior : MonoBehaviour
+public class MobChasingBehavior : MonoBehaviour
 {
     public float аggressDistance;
     public float stopDistance;
