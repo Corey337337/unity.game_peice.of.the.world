@@ -4,6 +4,7 @@ using UnityEngine.Audio;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] private string label = "Без названия";
     public List<GameObject> possibleItems;
 
     public float spawnChance;
