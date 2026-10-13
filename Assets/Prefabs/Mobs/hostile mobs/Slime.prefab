@@ -10,15 +10,18 @@ GameObject:
   m_Component:
   - component: {fileID: 8006014666985874113}
   - component: {fileID: 1786275481398236468}
+  - component: {fileID: 6786277053858540903}
   - component: {fileID: 2596502052826602038}
-  - component: {fileID: 8957103414229466705}
   - component: {fileID: 6123407300129049148}
   - component: {fileID: 561678420253506130}
   - component: {fileID: 2089246663218769740}
   - component: {fileID: 403117182937085690}
   - component: {fileID: 4950983295956157318}
+  - component: {fileID: 5920001731562979898}
   - component: {fileID: 428402012839495198}
+  - component: {fileID: 8957103414229466705}
   - component: {fileID: 4667818683234056024}
+  - component: {fileID: 933421849190888505}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -101,6 +104,33 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
+--- !u!50 &6786277053858540903
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784434241980048551}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &2596502052826602038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,18 +177,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6727799, y: 0.52420187}
   m_EdgeRadius: 0
---- !u!114 &8957103414229466705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784434241980048551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de24d77106a9571419cc35df4afe2ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Mob
 --- !u!114 &6123407300129049148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,8 +248,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackAimComponent
   AttackZone: {fileID: 1525261212907909613}
-  zoneDistance: 1
+  zoneDistance: 0.85
   originOffset: {x: 0, y: 0.2}
+--- !u!114 &5920001731562979898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784434241980048551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8222100f1070bcf42942cbce8b1ddc42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobAttackBehaviour
+  waitSeconds: 0
+  distanceToBit: 1
 --- !u!114 &428402012839495198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +278,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MobAggressiveBehavior
   "\u0430ggressDistance": 3.5
   stopDistance: 0.7
+--- !u!114 &8957103414229466705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784434241980048551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de24d77106a9571419cc35df4afe2ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mob
 --- !u!114 &4667818683234056024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +302,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90518ed8bd6a3c94698c5f7947175763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChunkDespawn
+--- !u!114 &933421849190888505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784434241980048551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117f673baee5215409b39b6901112e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DistanceComponent
 --- !u!1 &1525261212907909613
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +341,7 @@ Transform:
   m_GameObject: {fileID: 1525261212907909613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0.85, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

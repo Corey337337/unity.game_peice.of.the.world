@@ -26,18 +26,19 @@ public class AttackComponent : MonoBehaviour
     private IEnumerator AttackRoutine()
     {
         isAttack = true;
+        Debug.Log("атакую!!!");
         yield return new WaitForSeconds(activeTime);
         isAttack = false;
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        
         if (isAttack)
         {
             var health = other.GetComponent<HealthComponent>();
             if (health != null)
             {
+                Debug.Log("наношу дамаг!!");
                 health.TakeDamage(damage);
                 isAttack = false;
             }

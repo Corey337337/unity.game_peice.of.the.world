@@ -646,6 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718775090}
   - component: {fileID: 718775089}
+  - component: {fileID: 718775094}
   - component: {fileID: 718775088}
   - component: {fileID: 718775087}
   - component: {fileID: 718775086}
@@ -653,8 +654,10 @@ GameObject:
   - component: {fileID: 718775084}
   - component: {fileID: 718775083}
   - component: {fileID: 718775082}
+  - component: {fileID: 718775092}
   - component: {fileID: 718775091}
   - component: {fileID: 718775081}
+  - component: {fileID: 718775093}
   m_Layer: 0
   m_Name: MobTemplate(Attack able)
   m_TagString: Untagged
@@ -894,6 +897,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MobAggressiveBehavior
   "\u0430ggressDistance": 0
   stopDistance: 0
+--- !u!114 &718775092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718775080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8222100f1070bcf42942cbce8b1ddc42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobAttackBehaviour
+  waitSeconds: 0
+  distanceToBit: 0
+--- !u!114 &718775093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718775080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117f673baee5215409b39b6901112e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DistanceComponent
+--- !u!50 &718775094
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718775080}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &802048014 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6333937746104880170, guid: ee2622990924e764a8dbaf6206f4ea20, type: 3}
@@ -1660,6 +1716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1813377839905325260}
   - component: {fileID: 3285175194068287489}
+  - component: {fileID: 8637431718019388728}
   - component: {fileID: 790862804547387667}
   - component: {fileID: 7306668169780706783}
   - component: {fileID: 8637431718019388727}
@@ -1840,6 +1897,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
   health: 0
+--- !u!50 &8637431718019388728
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952194760101781578}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

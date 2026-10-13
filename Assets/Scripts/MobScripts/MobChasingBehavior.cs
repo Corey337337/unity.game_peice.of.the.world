@@ -8,13 +8,13 @@ public class MobChasingBehavior : MonoBehaviour
 
     private MoverComponent mover;
     private MobsWalkBehaviour walkBehaviour;
-
-    //private AttackComponent attacker;
+    private DistanceComponent dist;
 
     private bool isChasing = false;
 
     private GameObject player;
 
+    /*
     public bool CheckDistance()
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
@@ -23,7 +23,7 @@ public class MobChasingBehavior : MonoBehaviour
             return true;
         }
         return false;
-    }
+    }*/
 
     private void StartChase()
     {
@@ -49,19 +49,18 @@ public class MobChasingBehavior : MonoBehaviour
         walkBehaviour.enabled = true;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         mover = GetComponent<MoverComponent>();
         walkBehaviour = GetComponent<MobsWalkBehaviour>();
+        dist = GetComponent<DistanceComponent>();
         //attacker = GetComponent<AttackComponent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (CheckDistance())
+        if (dist.CheckDistance(аggressDistance, player))
         {
             if (!isChasing)
             {
