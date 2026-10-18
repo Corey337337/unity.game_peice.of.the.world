@@ -21,4 +21,14 @@ public static class WorldStorage
         File.WriteAllText(ListPath, JsonUtility.ToJson(list, true));
     }
 
+    public static void DeleteWorldData(string worldId)
+    {
+        string path = Path.Combine(WorldsDir, worldId + ".json");
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+
+    }
 }
