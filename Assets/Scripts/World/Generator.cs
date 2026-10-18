@@ -14,7 +14,13 @@ public class Generator : MonoBehaviour
 
     private void Awake()
     {
-        offset = new Vector2(Random.Range(0, 10000), Random.Range(0, 10000));//скоро изменю на принимаение параметра сида со скрипта создающего контентмир
+        if (GameSession.CurrentWorld == null)
+        {
+            offset = new Vector2(Random.Range(0, 10000), Random.Range(0, 10000));
+            return;
+        }
+
+        offset = GameSession.CurrentWorld.seed;
     }
 
     public Block GenerateBlocksInChunk(int globalX, int globalY)
