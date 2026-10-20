@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2049271753456060101}
   - component: {fileID: 4006462227503839828}
   - component: {fileID: 3117426644370072327}
-  - component: {fileID: 6802044317011957382}
-  - component: {fileID: -3273480160510181238}
-  - component: {fileID: 1271222887657817910}
+  - component: {fileID: 8707409251575257879}
+  - component: {fileID: 8751456283338644991}
   m_Layer: 0
   m_Name: snow
   m_TagString: Untagged
@@ -134,7 +133,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -156,24 +155,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Block
   blockName: Snow
   blockID: 3
-  spawners: []
+  spawners:
+  - {fileID: 8707409251575257879}
+  - {fileID: 8751456283338644991}
   globalX: 0
   globalY: 0
---- !u!114 &6802044317011957382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202130641473328523}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a5e20d05a98384da3d8fdf65b0133c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
-  forceSpeed: 1.5
-  player: {fileID: 510766318062383384, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
---- !u!114 &-3273480160510181238
+--- !u!114 &8707409251575257879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,23 +169,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 8202130641473328523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9e85193c4e5704988c8237daaeea0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
-  possibleProps: []
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  label: "\u041C\u043E\u0431\u044B"
+  possibleItems: []
   spawnChance: 0
---- !u!114 &1271222887657817910
+  block: {fileID: 3117426644370072327}
+--- !u!114 &8751456283338644991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8202130641473328523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5022a0fecd6e9d844961c5b72eacd7d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MobSpawner
-  possibleMobs:
-  - {fileID: 0}
-  spawnChance: 0.05
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  label: "\u0414\u0435\u043A\u043E\u0440"
+  possibleItems:
+  - {fileID: 8413058134071973085, guid: 80729084ad63f574ea32cc069d4afd14, type: 3}
+  spawnChance: 0.1
+  block: {fileID: 3117426644370072327}

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7649203021157036742}
   - component: {fileID: 4579556525696904206}
-  - component: {fileID: 1955708359676279640}
   - component: {fileID: -7092400439968765820}
   - component: {fileID: 6333937746104880170}
   - component: {fileID: 4775594613562358226}
@@ -96,20 +95,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1955708359676279640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719913044311765363}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a5e20d05a98384da3d8fdf65b0133c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
-  forceSpeed: 2.5
-  player: {fileID: 510766318062383384, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
 --- !u!61 &-7092400439968765820
 BoxCollider2D:
   m_ObjectHideFlags: 0

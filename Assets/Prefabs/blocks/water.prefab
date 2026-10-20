@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 7845081637655847864}
   - component: {fileID: 5270603173364023075}
   - component: {fileID: 5903626868495876685}
-  - component: {fileID: -4318312049148698990}
-  - component: {fileID: -2882211327039195280}
-  - component: {fileID: 2470817279382717157}
+  - component: {fileID: 4120921992683326630}
+  - component: {fileID: -3908609428504688478}
   m_Layer: 0
   m_Name: water
   m_TagString: Untagged
@@ -159,7 +158,7 @@ MonoBehaviour:
   spawners: []
   globalX: 0
   globalY: 0
---- !u!114 &-4318312049148698990
+--- !u!114 &4120921992683326630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,26 +167,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5579296513571937561}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a5e20d05a98384da3d8fdf65b0133c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
-  forceSpeed: 1
-  player: {fileID: 510766318062383384, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
---- !u!114 &-2882211327039195280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5579296513571937561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9e85193c4e5704988c8237daaeea0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
-  possibleProps: []
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  label: "\u041C\u043E\u0431\u044B"
+  possibleItems: []
   spawnChance: 0
---- !u!114 &2470817279382717157
+  block: {fileID: 5903626868495876685}
+--- !u!114 &-3908609428504688478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,9 +183,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5579296513571937561}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5022a0fecd6e9d844961c5b72eacd7d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MobSpawner
-  possibleMobs:
-  - {fileID: 0}
-  spawnChance: 0.05
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  label: "\u0414\u0435\u043A\u043E\u0440"
+  possibleItems: []
+  spawnChance: 0
+  block: {fileID: 5903626868495876685}

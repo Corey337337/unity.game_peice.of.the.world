@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6387467309268729106}
   - component: {fileID: 7415859600917153911}
   - component: {fileID: 6787455110904028623}
-  - component: {fileID: 824111783947575719}
   - component: {fileID: -3638546594817302785}
   - component: {fileID: -2722515166300453183}
   m_Layer: 0
@@ -158,22 +157,9 @@ MonoBehaviour:
   blockID: 4
   spawners:
   - {fileID: -3638546594817302785}
+  - {fileID: -2722515166300453183}
   globalX: 0
   globalY: 0
---- !u!114 &824111783947575719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5838991436643142505}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a5e20d05a98384da3d8fdf65b0133c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
-  forceSpeed: 2.5
-  player: {fileID: 510766318062383384, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
 --- !u!114 &-3638546594817302785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,12 +185,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5838991436643142505}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   label: "\u0414\u0435\u043A\u043E\u0440"
-  possibleItems: []
-  spawnChance: 0
+  possibleItems:
+  - {fileID: 206541334254422426, guid: 0f548845f104ebe45be7b9a42ce21f14, type: 3}
+  spawnChance: 0.1
   block: {fileID: 6787455110904028623}
