@@ -134,7 +134,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -189,6 +189,7 @@ MonoBehaviour:
   label: "\u041C\u043E\u0431\u044B"
   possibleItems:
   - {fileID: 784434241980048551, guid: 1fc9072486b91a84da6279a32cb84244, type: 3}
+  - {fileID: 5455881575321002472, guid: 105348be8d79c8c47b6ae4c9c8a3a8ae, type: 3}
   spawnChance: 0.02
   block: {fileID: 6787455110904028623}
 --- !u!114 &-2722515166300453183

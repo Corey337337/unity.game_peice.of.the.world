@@ -25,11 +25,11 @@ public class MobsWalkBehaviour : MonoBehaviour
     {
         isWalking = true;
         chooseWay();
-        walkDuration = Random.Range(4, 11);
+        walkDuration = Random.Range(3, 11);
         //Debug.Log($"ходит - {walkDuration} сек");
         yield return new WaitForSeconds(walkDuration);
         mover.SetDirection(new Vector2(0,0));
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         isWalking = false;
     }
 

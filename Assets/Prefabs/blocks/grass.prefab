@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1955708359676279640}
   - component: {fileID: -7092400439968765820}
   - component: {fileID: 6333937746104880170}
-  - component: {fileID: 7190286183424905519}
   - component: {fileID: 4775594613562358226}
+  - component: {fileID: 7190286183424905519}
   m_Layer: 0
   m_Name: grass
   m_TagString: Untagged
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -175,24 +175,6 @@ MonoBehaviour:
   - {fileID: 4775594613562358226}
   globalX: 0
   globalY: 0
---- !u!114 &7190286183424905519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719913044311765363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  label: "\u0421\u043F\u0430\u0432\u043D\u0435\u0440 \u0434\u0435\u043A\u043E\u0440\u0430\u0446\u0438\u0439"
-  possibleItems:
-  - {fileID: 7461390998267558498, guid: 0097dd1ef86c0f644abf20315a3695a3, type: 3}
-  - {fileID: 5859675051963090067, guid: 150b3ca0e5a50eb4d867fe6dce796bf3, type: 3}
-  spawnChance: 0.1
-  block: {fileID: 6333937746104880170}
 --- !u!114 &4775594613562358226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,9 +187,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  label: "\u0421\u043F\u0430\u0432\u043D\u0435\u0440 \u043C\u043E\u0431\u043E\u0432"
+  label: "\u041C\u043E\u0431\u044B"
   possibleItems:
   - {fileID: 5649510751593281751, guid: bd3d795b75029fa4f98d2806a3dc3c33, type: 3}
   - {fileID: 784434241980048551, guid: 1fc9072486b91a84da6279a32cb84244, type: 3}
+  - {fileID: 5455881575321002472, guid: 105348be8d79c8c47b6ae4c9c8a3a8ae, type: 3}
   spawnChance: 0.03
+  block: {fileID: 6333937746104880170}
+--- !u!114 &7190286183424905519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719913044311765363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  label: "\u0414\u0435\u043A\u043E\u0440"
+  possibleItems:
+  - {fileID: 7461390998267558498, guid: 0097dd1ef86c0f644abf20315a3695a3, type: 3}
+  - {fileID: 5859675051963090067, guid: 150b3ca0e5a50eb4d867fe6dce796bf3, type: 3}
+  spawnChance: 0.1
   block: {fileID: 6333937746104880170}
