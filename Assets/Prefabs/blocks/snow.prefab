@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8780883394749142137, guid: 5db270d4664469a47a2a12936fd63cb0, type: 3}
+  m_Sprite: {fileID: 5251734906795025119, guid: 8d44ad9e865bfe14e8797d97eb318be5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,5 +191,6 @@ MonoBehaviour:
   label: "\u0414\u0435\u043A\u043E\u0440"
   possibleItems:
   - {fileID: 8413058134071973085, guid: 80729084ad63f574ea32cc069d4afd14, type: 3}
-  spawnChance: 0.1
+  - {fileID: 5904966215236170969, guid: a3fab13d69c79f149b8a8a288495fac2, type: 3}
+  spawnChance: 0.2
   block: {fileID: 3117426644370072327}
