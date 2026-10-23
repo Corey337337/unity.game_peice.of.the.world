@@ -155,7 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Block
   blockName: sand
   blockID: 2
-  spawners: []
+  spawners:
+  - {fileID: -5531428019097120195}
+  - {fileID: 3036127743165448765}
   globalX: 0
   globalY: 0
 --- !u!114 &-5531428019097120195
@@ -165,14 +167,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027094514218800202}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   label: "\u041C\u043E\u0431\u044B"
-  possibleItems: []
-  spawnChance: 0
+  possibleItems:
+  - {fileID: 4960399666512958458, guid: f6dd09bea76eafe49800c52ef4d6f90e, type: 3}
+  spawnChance: 0.02
   block: {fileID: 6080807425761929137}
 --- !u!114 &3036127743165448765
 MonoBehaviour:
@@ -181,12 +184,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027094514218800202}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   label: "\u0414\u0435\u043A\u043E\u0440"
-  possibleItems: []
-  spawnChance: 0
+  possibleItems:
+  - {fileID: 3556973553061354462, guid: b9b132cbf2a8f1741a8fbeef6924a0df, type: 3}
+  spawnChance: 0.05
   block: {fileID: 6080807425761929137}
