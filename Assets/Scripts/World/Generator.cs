@@ -44,7 +44,7 @@ public class Generator : MonoBehaviour
         else if (value < 0.7)
             return possibleBlocks[4];
         else
-            return possibleBlocks[3];
+            return possibleBlocks[3];//5 
 
     }
 }

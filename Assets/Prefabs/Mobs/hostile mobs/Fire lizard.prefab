@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 892583980220861023}
   - component: {fileID: 6652687178812665425}
   - component: {fileID: 5393128460653236468}
+  - component: {fileID: 5196432069980694729}
   - component: {fileID: 676410893449732420}
   - component: {fileID: 4178123173439526296}
   m_Layer: 0
@@ -423,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackAimComponent
   AttackZone: {fileID: 3243297554465118612}
-  zoneDistance: 0.8
+  zoneDistance: 0.77
   originOffset: {x: 0, y: 0.3}
 --- !u!114 &6652687178812665425
 MonoBehaviour:
@@ -438,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MobAttackBehaviour
   waitSeconds: 0
-  distanceToBit: 2
+  distanceToBit: 1.3
 --- !u!114 &5393128460653236468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +454,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MobAggressiveBehavior
   "\u0430ggressDistance": 4
   stopDistance: 0.75
+--- !u!114 &5196432069980694729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960399666512958458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4013dd442d6966f4a815c3a404594185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::XP_GiverComponent
+  xp: 20
+  leveling: {fileID: 3342250941947853551, guid: 6d48d67e319f1b4468dc37d891290fce, type: 3}
 --- !u!114 &676410893449732420
 MonoBehaviour:
   m_ObjectHideFlags: 0

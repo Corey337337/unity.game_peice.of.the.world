@@ -31,7 +31,7 @@ public class AttackComponent : MonoBehaviour
     private IEnumerator AttackRoutine()
     {
         isAttack = true;
-        Debug.Log("атакую!!!");
+        //Debug.Log("атакую!!!");
         yield return new WaitForSeconds(activeTime);
         isAttack = false;
     }
@@ -43,7 +43,7 @@ public class AttackComponent : MonoBehaviour
             var health = other.GetComponent<HealthComponent>();
             if (health != null)
             {
-                Debug.Log("наношу дамаг!!");
+                //Debug.Log("наношу дамаг!!");
                 health.TakeDamage(damage);
                 OnHit?.Invoke(other.gameObject);
                 isAttack = false;

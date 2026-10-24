@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 590431212}
   - component: {fileID: 590431215}
   - component: {fileID: 590431211}
-  - component: {fileID: 590431214}
+  - component: {fileID: 590431217}
   - component: {fileID: 590431216}
   m_Layer: 0
   m_Name: BlockTemplate
@@ -503,7 +503,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Block
   blockName: 
   blockID: 0
-  spawners: []
+  spawners:
+  - {fileID: 590431217}
+  - {fileID: 590431216}
   globalX: 0
   globalY: 0
 --- !u!212 &590431212
@@ -580,20 +582,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &590431214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590431210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a5e20d05a98384da3d8fdf65b0133c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedComponent
-  forceSpeed: 0
-  player: {fileID: 0}
 --- !u!61 &590431215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -649,11 +637,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 590431210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9e85193c4e5704988c8237daaeea0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PropSpawner
-  possibleProps: []
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  label: "\u0414\u0435\u043A\u043E\u0440"
+  possibleItems: []
   spawnChance: 0
+  block: {fileID: 0}
+--- !u!114 &590431217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590431210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6256fa94798d1be4ab69422e571d6f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  label: "\u041C\u043E\u0431\u044B"
+  possibleItems: []
+  spawnChance: 0
+  block: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +766,7 @@ GameObject:
   - component: {fileID: 718775091}
   - component: {fileID: 718775081}
   - component: {fileID: 718775093}
+  - component: {fileID: 718775095}
   m_Layer: 0
   m_Name: MobTemplate(Attack able)
   m_TagString: Untagged
@@ -1052,6 +1059,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &718775095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718775080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4013dd442d6966f4a815c3a404594185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::XP_GiverComponent
+  xp: 0
+  leveling: {fileID: 3342250941947853551, guid: 6d48d67e319f1b4468dc37d891290fce, type: 3}
 --- !u!114 &802048014 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6333937746104880170, guid: ee2622990924e764a8dbaf6206f4ea20, type: 3}
@@ -1436,6 +1457,7 @@ MonoBehaviour:
   - {fileID: 6080807425761929137, guid: 7d0b128ad2a05224ebd601870358b148, type: 3}
   - {fileID: 3117426644370072327, guid: 80d8c2d4dc93c644eb6c6b94de211234, type: 3}
   - {fileID: 6787455110904028623, guid: 3181bd50300cc1d418bbb13a7b81cdf6, type: 3}
+  - {fileID: 2479623503870401521, guid: 9f5de7ed33d92714681a44a69fdc7e07, type: 3}
   scale: 0.02
   offset: {x: 0, y: 0}
 --- !u!1001 &1386087833

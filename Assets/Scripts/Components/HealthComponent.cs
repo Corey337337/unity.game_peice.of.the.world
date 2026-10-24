@@ -35,7 +35,7 @@ public class HealthComponent : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log($"умер");
+        //Debug.Log($"умер");
         OnDie?.Invoke();
         Destroy(gameObject);
     }

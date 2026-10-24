@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  health: 100
+  health: 20
 --- !u!61 &-376932292422576488
 BoxCollider2D:
   m_ObjectHideFlags: 0

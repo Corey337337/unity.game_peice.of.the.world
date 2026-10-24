@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 02ce9a23a80f17248be60ba718bef6e9
+guid: fda9e37ad11425b49a7d0d6e5bf69c7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2760674798787492502
-    second: water_2_0
+      213: 3332472316991851587
+    second: mushroom block_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water_2_0
+      name: mushroom block_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69af9125a13ef4620800000000000000
-      internalID: 2760674798787492502
+      spriteID: 34c4f168ae15f3e20800000000000000
+      internalID: 3332472316991851587
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      water_2_0: 2760674798787492502
+      mushroom block_0: 3332472316991851587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
