@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7368192163941822749}
   - component: {fileID: 1898805800497719969}
   - component: {fileID: 3168953165042933349}
+  - component: {fileID: -4370559580166994521}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -124,7 +125,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 6
 --- !u!114 &-7614855223736957158
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  health: 20
+  health: 100
 --- !u!61 &-376932292422576488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -259,6 +260,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7783eb8922f25a48b3d0d54ea5d9196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLocation
+--- !u!114 &-4370559580166994521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510766318062383384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25ebf3a0b8ad244892f44e4c37ed75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlammableComponent
+  isBurning: 0
 --- !u!1 &6407971595694794108
 GameObject:
   m_ObjectHideFlags: 0

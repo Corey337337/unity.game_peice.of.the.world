@@ -128,7 +128,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &2596502052826602038
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MobAttackBehaviour
   waitSeconds: 0
-  distanceToBit: 1
+  distanceToBit: 1.5
 --- !u!114 &428402012839495198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,9 +395,9 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.31791094, y: 0.4785286}
       - {x: -0.08103877, y: 0.77904}
-      - {x: -0.49740714, y: 0.5131746}
-      - {x: -0.49505827, y: -0.470472}
-      - {x: -0.052374844, y: -0.77892303}
+      - {x: -1.2816463, y: 0.45755476}
+      - {x: -1.2792976, y: -0.40372825}
+      - {x: -0.10799468, y: -0.6621214}
       - {x: 0.2900341, y: -0.5007986}
       - {x: 0.4007708, y: 0.002243232}
   m_UseDelaunayMesh: 1

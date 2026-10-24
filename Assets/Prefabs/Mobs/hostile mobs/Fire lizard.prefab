@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3243297554465118612}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,11 +81,12 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.31791094, y: 0.4785286}
       - {x: -0.08103877, y: 0.77904}
-      - {x: -0.49740714, y: 0.5131746}
-      - {x: -0.49505827, y: -0.470472}
-      - {x: -0.052374844, y: -0.77892303}
+      - {x: -1.8495312, y: 0.5134867}
+      - {x: -1.8479395, y: 0.10345423}
+      - {x: -1.8474456, y: -0.2956387}
+      - {x: -0.10379624, y: -0.7583544}
       - {x: 0.2900341, y: -0.5007986}
-      - {x: 0.4007708, y: 0.002243232}
+      - {x: 0.46790805, y: 0.02622084}
   m_UseDelaunayMesh: 1
 --- !u!212 &7500252547306286939
 SpriteRenderer:
@@ -163,6 +164,7 @@ GameObject:
   - component: {fileID: 8340711442456902405}
   - component: {fileID: 8871084917035968892}
   - component: {fileID: 6248018709001193449}
+  - component: {fileID: 3457772405456773788}
   - component: {fileID: 892583980220861023}
   - component: {fileID: 6652687178812665425}
   - component: {fileID: 5393128460653236468}
@@ -274,7 +276,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &2534537803000000029
@@ -311,7 +313,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.09571236, y: 0.31166038}
+  m_Offset: {x: 0.12688321, y: 0.35721782}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.047}
@@ -321,7 +323,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7250248, y: 0.7178934}
+  m_Size: {x: 1.5092264, y: 0.8090083}
   m_EdgeRadius: 0
 --- !u!114 &1555455219633299150
 MonoBehaviour:
@@ -393,6 +395,21 @@ MonoBehaviour:
   damage: 10
   cooldown: 2.5
   activeTime: 0.1
+--- !u!114 &3457772405456773788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960399666512958458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86fde19bc0583641a49bf667b861697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IgniterComponent
+  burnDamage: 5
+  duration: 3
+  cooldown: 1
 --- !u!114 &892583980220861023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackAimComponent
   AttackZone: {fileID: 3243297554465118612}
-  zoneDistance: 0.75
+  zoneDistance: 0.8
   originOffset: {x: 0, y: 0.3}
 --- !u!114 &6652687178812665425
 MonoBehaviour:
@@ -421,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MobAttackBehaviour
   waitSeconds: 0
-  distanceToBit: 3
+  distanceToBit: 2
 --- !u!114 &5393128460653236468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MobAggressiveBehavior
   "\u0430ggressDistance": 4
-  stopDistance: 1
+  stopDistance: 0.75
 --- !u!114 &676410893449732420
 MonoBehaviour:
   m_ObjectHideFlags: 0

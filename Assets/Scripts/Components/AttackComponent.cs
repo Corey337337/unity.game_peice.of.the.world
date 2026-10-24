@@ -1,14 +1,19 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class AttackComponent : MonoBehaviour
 {
     public float damage;
     public float cooldown;
     public float activeTime;
+    private bool isAttack = false;
+
+
+    public event Action<GameObject> OnHit;
 
     private float nextAttackTime;
-    private bool isAttack = false;
+   
 
     public void TryAttack()
     {
@@ -40,6 +45,7 @@ public class AttackComponent : MonoBehaviour
             {
                 Debug.Log("наношу дамаг!!");
                 health.TakeDamage(damage);
+                OnHit?.Invoke(other.gameObject);
                 isAttack = false;
             }
         }

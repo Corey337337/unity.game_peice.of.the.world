@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 8680517654065446772}
   - component: {fileID: 6354310499518327892}
   - component: {fileID: 6323489190773470777}
+  - component: {fileID: -4229671432579735245}
   m_Layer: 0
   m_Name: Stone Golem
   m_TagString: Untagged
@@ -128,7 +129,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &5899552432348958936
@@ -275,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MobAttackBehaviour
   waitSeconds: 0
-  distanceToBit: 1
+  distanceToBit: 1.5
 --- !u!114 &8680517654065446772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +315,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117f673baee5215409b39b6901112e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistanceComponent
+--- !u!114 &-4229671432579735245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455881575321002472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25ebf3a0b8ad244892f44e4c37ed75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlammableComponent
+  isBurning: 0
 --- !u!1 &5566900983956319875
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,8 +409,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.31791094, y: 0.4785286}
       - {x: -0.08103877, y: 0.77904}
-      - {x: -0.49740714, y: 0.5131746}
-      - {x: -0.49505827, y: -0.470472}
+      - {x: -1.4131186, y: 0.52388483}
+      - {x: -1.4161246, y: -0.49724737}
       - {x: -0.052374844, y: -0.77892303}
       - {x: 0.2900341, y: -0.5007986}
       - {x: 0.4007708, y: 0.002243232}
