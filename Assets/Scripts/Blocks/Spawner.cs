@@ -5,45 +5,76 @@ using UnityEngine.Audio;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private string label = "Без названия";
-    public List<GameObject> possibleItems;
+    public List<GameObject> possibleObjects;
 
     public float spawnChance;
 
     public Block block;
 
+    public bool deterministic = true;
+
     public void Spawn()
     {
-        if (possibleItems.Count <= 0)
+        if (possibleObjects.Count <= 0)
         {
             return;
         }
 
-        if (checkChance())
+        float roll;
+        int index;
+
+        if (deterministic)
         {
-            int randomProp = Random.Range(0, possibleItems.Count);
-            var prop = Instantiate(possibleItems[randomProp], block.transform.position, Quaternion.identity);
-            //var prop = Instantiate(possibleItems[randomProp], transform);
-            //prop.transform.position = new Vector2(block.globalX, block.globalY);
+            int salt = block.spawners.IndexOf(this);
 
-            //эксперименты
-            //possibleItems[randomProp] = Instantiate(block.getPosition(), transform);//не обращай внимания я просто вспоминал синтаксис
-            //possibleItems[randomProp].transform.position = new Vector2(block.getPosition());
-            //possibleItems[randomProp].gameObject.SetActive(true);//замена логики
-        }
+            int seed = World.Instance.generator.SeedInt;
 
-    }
+            var rng = new System.Random(Generator.CellHash(seed, (int)block.globalX, (int)block.globalY, salt));
 
-    public bool checkChance()
-    {
-        float randNum = Random.Range(0f, 1f);
-        if (randNum <= spawnChance)
-        {
-            return true;
+
+            roll = (float)rng.NextDouble();
+            index = rng.Next(possibleObjects.Count);
         }
         else
         {
-            return false;
+            roll = Random.value;
+            index = Random.Range(0, possibleObjects.Count);
         }
+
+        
+
+        if (roll > spawnChance)
+        {
+            return;
+        }
+
+        Transform parent;
+
+        if (deterministic)
+        {
+            parent = block.transform.parent;
+        }
+        else
+        {
+            parent = null;
+        }
+
+
+        Instantiate(possibleObjects[index], block.transform.position, Quaternion.identity, parent);
+
     }
+
+    //public bool checkChance()
+    //{
+    //    float randNum = Random.Range(0f, 1f);
+    //    if (randNum <= spawnChance)
+    //    {
+    //        return true;
+    //    }
+    //    else
+    //    {
+    //        return false;
+    //    }
+    //}
     
 }

@@ -19,8 +19,6 @@ public class World : MonoBehaviour
     private Vector2Int PreviousChunk;
     private List<Chunk> ListChunks = new List<Chunk>();
 
-    //private Dictionary<Vector2Int, int[]> existingСhunks = new Dictionary<Vector2Int, int[]>();
-
     public static World Instance;
     void Awake() 
     { 
@@ -34,7 +32,6 @@ public class World : MonoBehaviour
         int y = Mathf.FloorToInt(player.transform.position.y / chunk.height);
 
         return new Vector2Int(x, y);
-        //return GetChunkAt(player.transform.position);
     }
 
 
@@ -44,14 +41,6 @@ public class World : MonoBehaviour
         int y = Mathf.FloorToInt(pos.y / chunk.height);
         return IsChunkExists(new Vector2Int(x, y));
     }
-
-    /*
-    public Vector2Int GetChunkAt(Vector3 pos)
-    {
-        int x = Mathf.FloorToInt(pos.x / chunk.width);
-        int y = Mathf.FloorToInt(pos.y / chunk.height);
-        return new Vector2Int(x, y);
-    }*/
 
     public List<Vector2Int> GetNeighboursCords()
     {
@@ -101,43 +90,6 @@ public class World : MonoBehaviour
 
                 ListChunks.Add(c);
 
-                /*
-                //начну писать логику тут но потом если необходимо будет создам новый метод
-                if (existingСhunks.ContainsKey(cord))
-                {
-                    int[] ids = existingСhunks[cord];
-
-                    //Debug.Log(string.Join(", ", ids));
-                    int index = 0;
-                    for (int i = 0; i < c.width; i++)
-                    {
-                        for (int j = 0; j < c.height; j++)
-                        {
-                            var block = Instantiate(generator.possibleBlocks[ids[index]], c.transform);
-                            block.transform.localPosition = new Vector3(i, j, 0);
-                            block.transform.localRotation = Quaternion.identity;
-
-                            c.blocksInChunk.Add(block);
-                            index++;
-                        }
-                    }
-                }
-                else
-                {
-                    //создаем новый и добавляем в словарь
-                    c.GenerateChunk(generator);//создаем новый
-
-                    int[] ids = new int[c.height * c.width];
-                    for (int i = 0; i < c.blocksInChunk.Count; i++)
-                    {
-                        ids[i] = c.blocksInChunk[i].blockID;
-                    }
-                    //existingСhunks.Add(cord, ids);//добавляем в словарь (не надо)
-                }*/
-
-                //c.GenerateChunk(generator);//это надо убрать потом 
-
-
             }
         }
         DeleteChunks(spisok);//мы передаем список не того что нужно удалить а то с чем сравнивать
@@ -174,14 +126,6 @@ public class World : MonoBehaviour
                 c.chunkPosition = new Vector2Int(i, j);
 
                 c.GenerateChunk(generator);
-                /*
-                int[] ids = new int[c.height * c.width];
-
-                for (int k = 0; k < c.blocksInChunk.Count; k++)
-                {
-                    ids[k] = c.blocksInChunk[k].blockID;
-                }
-                existingСhunks.Add(c.chunkPosition, ids);*/
 
                 ListChunks.Add(c);
             }

@@ -6,7 +6,7 @@ public class ChunkDespawn : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     IEnumerator Start()
     {
-        var wait = new WaitForSeconds(1f);
+        var wait = new WaitForSeconds(0.1f);
         while (true)
         {
             yield return wait;
@@ -16,11 +16,5 @@ public class ChunkDespawn : MonoBehaviour
             }
         }
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

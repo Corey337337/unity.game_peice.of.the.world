@@ -173,11 +173,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   label: "\u041C\u043E\u0431\u044B"
-  possibleItems:
+  possibleObjects:
   - {fileID: 784434241980048551, guid: 1fc9072486b91a84da6279a32cb84244, type: 3}
   - {fileID: 5455881575321002472, guid: 105348be8d79c8c47b6ae4c9c8a3a8ae, type: 3}
   spawnChance: 0.02
   block: {fileID: 6787455110904028623}
+  deterministic: 0
 --- !u!114 &-2722515166300453183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   label: "\u0414\u0435\u043A\u043E\u0440"
-  possibleItems:
+  possibleObjects:
   - {fileID: 206541334254422426, guid: 0f548845f104ebe45be7b9a42ce21f14, type: 3}
   spawnChance: 0.1
   block: {fileID: 6787455110904028623}
+  deterministic: 1

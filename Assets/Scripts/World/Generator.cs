@@ -11,6 +11,30 @@ public class Generator : MonoBehaviour
     public float scale;
     public Vector2 offset;
 
+    public int SeedInt
+    {
+        get
+        {
+            int x = (int)offset.x;
+            int y = (int)offset.y;
+            return x * 73856093 + y * 19349663;
+            
+        }
+    }
+
+    public static int CellHash(int seed, int x, int y, int salt)
+    {
+        unchecked
+        {
+            uint h = 2166136261;
+            h = (h ^ (uint)seed) * 16777619;
+            h = (h ^ (uint)x) * 16777619;
+            h = (h ^ (uint)y) * 16777619;
+            h = (h ^ (uint)salt) * 16777619;
+            return (int)h;
+        }
+    }
+
 
     private void Awake()
     {
@@ -25,8 +49,6 @@ public class Generator : MonoBehaviour
 
     public Block GenerateBlocksInChunk(int globalX, int globalY)
     {
-        //int randomBlock = Random.Range(0, possibleBlocks.Count);
-        //return possibleBlocks[randomBlock];
         float noiseValue = Mathf.PerlinNoise((globalX + offset.x) * scale,(globalY + offset.y) * scale);
 
         return GetBlockByNoise(noiseValue);
@@ -43,7 +65,7 @@ public class Generator : MonoBehaviour
             return possibleBlocks[0];
         else if (value < 0.7)
             return possibleBlocks[4];
-        else
+        else 
             return possibleBlocks[3];//5 
 
     }
