@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24d77106a9571419cc35df4afe2ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mob
+  weight: 5
 --- !u!114 &3605855799524766071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4013dd442d6966f4a815c3a404594185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::XP_GiverComponent
-  xp: 15
+  xp: 20
   leveling: {fileID: 3342250941947853551, guid: 6d48d67e319f1b4468dc37d891290fce, type: 3}
 --- !u!114 &6354310499518327892
 MonoBehaviour:

@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e8dd8db4797d249b307959189521b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Prop
+  weight: 60
 --- !u!114 &-3937127748034676104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ BoxCollider2D:
   m_Offset: {x: -0.09422493, y: 0.24786997}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.035}
+    pivot: {x: 0.5, y: 0.03}
     oldSize: {x: 1.92, y: 2.32}
     newSize: {x: 3.509091, y: 6.109091}
     adaptiveTilingThreshold: 0.5

@@ -196,6 +196,7 @@ MonoBehaviour:
   possibleObjects:
   - {fileID: 5859675051963090067, guid: 150b3ca0e5a50eb4d867fe6dce796bf3, type: 3}
   - {fileID: 7461390998267558498, guid: 0097dd1ef86c0f644abf20315a3695a3, type: 3}
+  - {fileID: 5852834595280528030, guid: 59d70d8b6645e3b488331c83ec7c222b, type: 3}
   spawnChance: 0.1
   block: {fileID: 6333937746104880170}
   deterministic: 1

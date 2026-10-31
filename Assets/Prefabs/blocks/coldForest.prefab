@@ -194,6 +194,7 @@ MonoBehaviour:
   label: "\u0414\u0435\u043A\u043E\u0440"
   possibleObjects:
   - {fileID: 206541334254422426, guid: 0f548845f104ebe45be7b9a42ce21f14, type: 3}
+  - {fileID: 5852834595280528030, guid: 59d70d8b6645e3b488331c83ec7c222b, type: 3}
   spawnChance: 0.1
   block: {fileID: 6787455110904028623}
   deterministic: 1

@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e8dd8db4797d249b307959189521b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Prop
+  weight: 10
 --- !u!114 &1585409868029387023
 MonoBehaviour:
   m_ObjectHideFlags: 0

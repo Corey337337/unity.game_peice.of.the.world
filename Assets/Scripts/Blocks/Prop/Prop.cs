@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Prop : MonoBehaviour
+public class Prop : Spawnable
 {
     
 }

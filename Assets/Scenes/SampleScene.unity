@@ -641,9 +641,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   label: "\u0414\u0435\u043A\u043E\u0440"
-  possibleItems: []
+  possibleObjects: []
   spawnChance: 0
   block: {fileID: 0}
+  deterministic: 1
 --- !u!114 &590431217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,9 +658,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   label: "\u041C\u043E\u0431\u044B"
-  possibleItems: []
+  possibleObjects: []
   spawnChance: 0
   block: {fileID: 0}
+  deterministic: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24d77106a9571419cc35df4afe2ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mob
+  weight: 1
 --- !u!61 &718775088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1285,6 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e8dd8db4797d249b307959189521b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Prop
+  weight: 1
 --- !u!212 &1177486427
 SpriteRenderer:
   serializedVersion: 2
@@ -2279,6 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24d77106a9571419cc35df4afe2ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mob
+  weight: 1
 --- !u!1001 &7547487654292434171
 PrefabInstance:
   m_ObjectHideFlags: 0

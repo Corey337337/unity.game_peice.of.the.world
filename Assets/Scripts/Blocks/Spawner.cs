@@ -13,6 +13,33 @@ public class Spawner : MonoBehaviour
 
     public bool deterministic = true;
 
+
+    private static float GetWeight(GameObject obj)
+    {
+        var s = obj.GetComponent<Spawnable>();
+        if (s != null)
+            return s.weight;
+        else
+            return 1f;
+    }
+
+    private GameObject PickWeighted(float pick)
+    {
+        float total = 0f;
+        foreach (var obj in possibleObjects)
+            total += GetWeight(obj);
+
+        float target = pick * total;
+
+        foreach (var obj in possibleObjects)
+        {
+            float w = GetWeight(obj);
+            if (target < w) return obj;
+            target -= w;
+        }
+        return possibleObjects[possibleObjects.Count - 1];
+    }
+
     public void Spawn()
     {
         if (possibleObjects.Count <= 0)
@@ -21,7 +48,7 @@ public class Spawner : MonoBehaviour
         }
 
         float roll;
-        int index;
+        float pick;
 
         if (deterministic)
         {
@@ -33,12 +60,12 @@ public class Spawner : MonoBehaviour
 
 
             roll = (float)rng.NextDouble();
-            index = rng.Next(possibleObjects.Count);
+            pick = (float)rng.NextDouble();
         }
         else
         {
             roll = Random.value;
-            index = Random.Range(0, possibleObjects.Count);
+            pick = Random.value;
         }
 
         
@@ -59,8 +86,9 @@ public class Spawner : MonoBehaviour
             parent = null;
         }
 
+        GameObject chosen = PickWeighted(pick);
+        Instantiate(chosen, block.transform.position, Quaternion.identity, parent);
 
-        Instantiate(possibleObjects[index], block.transform.position, Quaternion.identity, parent);
 
     }
 

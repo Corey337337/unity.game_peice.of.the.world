@@ -195,6 +195,6 @@ MonoBehaviour:
   - {fileID: 6854249002641444092, guid: 8d27a384038950d43a45b1e7000e0c78, type: 3}
   - {fileID: 6627711815959448737, guid: fd4cbd8a6e2b1df41bd17e62be046e1c, type: 3}
   - {fileID: 6833215438435495265, guid: f3809e21fe1e5cd49be40a8c137b64b9, type: 3}
-  spawnChance: 0.25
+  spawnChance: 0.3
   block: {fileID: 2479623503870401521}
   deterministic: 1
