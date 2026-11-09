@@ -766,9 +766,10 @@ GameObject:
   - component: {fileID: 718775082}
   - component: {fileID: 718775092}
   - component: {fileID: 718775091}
+  - component: {fileID: 718775095}
+  - component: {fileID: 718775096}
   - component: {fileID: 718775081}
   - component: {fileID: 718775093}
-  - component: {fileID: 718775095}
   m_Layer: 0
   m_Name: MobTemplate(Attack able)
   m_TagString: Untagged
@@ -1076,6 +1077,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::XP_GiverComponent
   xp: 0
   leveling: {fileID: 3342250941947853551, guid: 6d48d67e319f1b4468dc37d891290fce, type: 3}
+--- !u!114 &718775096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718775080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d29effbea780fc448dd429b0b6d12fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootDropComponent
+  item: {fileID: 0}
 --- !u!114 &802048014 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6333937746104880170, guid: ee2622990924e764a8dbaf6206f4ea20, type: 3}
@@ -2506,6 +2520,7 @@ GameObject:
   - component: {fileID: 8637431718019388727}
   - component: {fileID: 1740198151210299286}
   - component: {fileID: 4525346125564751728}
+  - component: {fileID: 8637431718019388729}
   - component: {fileID: 1524066182191631278}
   m_Layer: 0
   m_Name: MobTemplate
@@ -2701,6 +2716,19 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8637431718019388729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952194760101781578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d29effbea780fc448dd429b0b6d12fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootDropComponent
+  item: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5517802227468607921}
   - component: {fileID: 8167679052252344765}
   - component: {fileID: 3602786029162866921}
+  - component: {fileID: 4137083122888073023}
   m_Layer: 0
   m_Name: Pork
   m_TagString: Untagged
@@ -143,3 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   data: {fileID: 11400000, guid: 0f860cc313e465c4f8941de42e58b03d, type: 2}
   count: 1
+--- !u!114 &4137083122888073023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5170700689589559574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef77bd5ce734e5b409626f5fb6b037b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eatable

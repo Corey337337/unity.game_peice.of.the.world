@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WorldItem : MonoBehaviour
+public class Item : MonoBehaviour
 {
     public ItemData data;
     public int count = 1;

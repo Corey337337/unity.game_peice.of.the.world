@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3649435000239276493}
   - component: {fileID: 1049453361085120475}
+  - component: {fileID: -2077421020883240107}
   - component: {fileID: 1316142255960258116}
   - component: {fileID: 1530088408860622230}
   m_Layer: 0
@@ -206,6 +207,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
+--- !u!114 &-2077421020883240107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5852834595280528030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16217b2121940040bbac62ddbdf4d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Portal
+  stones: 50
+  isActive: 0
 --- !u!114 &1316142255960258116
 MonoBehaviour:
   m_ObjectHideFlags: 0

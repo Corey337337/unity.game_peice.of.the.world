@@ -6,7 +6,7 @@ public class PlayerInput : MonoBehaviour
 
     public AttackAimComponent aim;
 
-    public AttackComponent attacker;//новый
+    public AttackComponent attacker;
 
     public void MovementInput()
     {

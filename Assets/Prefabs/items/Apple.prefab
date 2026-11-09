@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5754825039806107670}
   - component: {fileID: 3978890107389265983}
   - component: {fileID: 2111303788048433668}
+  - component: {fileID: 8920505775669960590}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -143,3 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   data: {fileID: 11400000, guid: 2b9a598b491af4c48ba4b461b89786fe, type: 2}
   count: 1
+--- !u!114 &8920505775669960590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4369181854037163426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef77bd5ce734e5b409626f5fb6b037b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eatable

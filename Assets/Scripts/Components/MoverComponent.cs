@@ -33,13 +33,12 @@ public class MoverComponent : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         transform.position += (Vector3)(direction * speed * Time.deltaTime);

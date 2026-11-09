@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 6652687178812665425}
   - component: {fileID: 5393128460653236468}
   - component: {fileID: 5196432069980694729}
+  - component: {fileID: -1207075926666688056}
   - component: {fileID: 676410893449732420}
   - component: {fileID: 4178123173439526296}
   m_Layer: 0
@@ -469,6 +470,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::XP_GiverComponent
   xp: 25
   leveling: {fileID: 3342250941947853551, guid: 6d48d67e319f1b4468dc37d891290fce, type: 3}
+--- !u!114 &-1207075926666688056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960399666512958458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d29effbea780fc448dd429b0b6d12fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootDropComponent
+  item: {fileID: 198988154418021304, guid: 6cd44cd7c2fb0e44285203c5e9e445b8, type: 3}
 --- !u!114 &676410893449732420
 MonoBehaviour:
   m_ObjectHideFlags: 0

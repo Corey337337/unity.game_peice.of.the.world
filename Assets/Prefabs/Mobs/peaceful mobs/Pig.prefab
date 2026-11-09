@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6467839999973363114}
   - component: {fileID: 3907537520298768139}
   - component: {fileID: 1211875151172302829}
+  - component: {fileID: 6086201256346173507}
   - component: {fileID: 4267902037644186419}
   - component: {fileID: -8198233617069998591}
   m_Layer: 0
@@ -228,6 +229,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MobsWalkBehaviour
   mover: {fileID: 3907537520298768139}
   isWalking: 0
+--- !u!114 &6086201256346173507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649510751593281751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d29effbea780fc448dd429b0b6d12fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootDropComponent
+  item: {fileID: 5170700689589559574, guid: 09c3ee59416282445bf3b40df84f88d7, type: 3}
 --- !u!114 &4267902037644186419
 MonoBehaviour:
   m_ObjectHideFlags: 0
