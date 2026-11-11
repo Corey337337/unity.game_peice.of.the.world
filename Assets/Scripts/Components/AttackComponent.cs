@@ -10,6 +10,8 @@ public class AttackComponent : MonoBehaviour
     private bool isAttack = false;
 
 
+    private CritComponent critComponent;
+
     public event Action<GameObject> OnHit;
 
     private float nextAttackTime;
@@ -41,11 +43,19 @@ public class AttackComponent : MonoBehaviour
         if (isAttack)
         {
             var health = other.GetComponent<HealthComponent>();
+
             if (health != null)
             {
-                //Debug.Log("наношу дамаг!!");
-                health.TakeDamage(damage);
+                float finalDamage = damage;
+
+                if (critComponent != null) 
+                {
+                    finalDamage = critComponent.CalculateDamage(damage);
+                }
+
+                health.TakeDamage(finalDamage);
                 OnHit?.Invoke(other.gameObject);
+
                 isAttack = false;
             }
         }
@@ -54,7 +64,7 @@ public class AttackComponent : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        critComponent = GetComponent<CritComponent>();
     }
 
     // Update is called once per frame

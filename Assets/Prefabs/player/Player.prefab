@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7703452510016157780}
   - component: {fileID: 8393101387515345981}
   - component: {fileID: 7368192163941822749}
+  - component: {fileID: -9034668011656040145}
   - component: {fileID: 1898805800497719969}
   - component: {fileID: -7636798529442252646}
   - component: {fileID: 3168953165042933349}
@@ -234,6 +235,20 @@ MonoBehaviour:
   damage: 5
   cooldown: 1.2
   activeTime: 0.1
+--- !u!114 &-9034668011656040145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510766318062383384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326398fb7c81d4d49b920090391f1129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CritComponent
+  critChance: 99
+  critDamage: 0.05
 --- !u!114 &1898805800497719969
 MonoBehaviour:
   m_ObjectHideFlags: 0
