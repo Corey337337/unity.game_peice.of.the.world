@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1561863189702729285}
   - component: {fileID: 6039743918888991573}
   - component: {fileID: 5816895805589401806}
+  - component: {fileID: -7510434234979912568}
   m_Layer: 0
   m_Name: FireBomb
   m_TagString: Untagged
@@ -143,3 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   data: {fileID: 11400000, guid: efe5e10d5ea4a724fb23986f8d62f106, type: 2}
   count: 1
+--- !u!114 &-7510434234979912568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198988154418021304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90518ed8bd6a3c94698c5f7947175763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChunkDespawn

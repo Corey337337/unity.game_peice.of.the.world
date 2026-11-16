@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 4061044951817330794}
   - component: {fileID: 8539214033070955481}
   - component: {fileID: 3576725054644098721}
+  - component: {fileID: 4846428708962320091}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -351,7 +352,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0000038146973, y: -0.10979575}
+  m_Offset: {x: -0.024518073, y: 0.34984547}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.55, y: 0.01}
@@ -361,7 +362,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6485722, y: 0.63316476}
+  m_Size: {x: 0.6976007, y: 0.75573575}
   m_EdgeRadius: 0
 --- !u!114 &3917217748638025621
 MonoBehaviour:
@@ -490,7 +491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::XP_GiverComponent
   xp: 30
-  leveling: {fileID: 3342250941947853551, guid: 6d48d67e319f1b4468dc37d891290fce, type: 3}
 --- !u!114 &-777372801402798423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,3 +541,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlammableComponent
   isBurning: 0
+--- !u!95 &4846428708962320091
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637848031797263925}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c261b7ee0ee423149b702ad2e9f12d2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

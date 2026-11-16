@@ -4,9 +4,13 @@ using System.Collections;
 
 public class HealthComponent : MonoBehaviour
 {
+
+    public float maxHealth;
     public float health;
+    
 
     public event Action OnTakeDamage;
+    public event Action OnHeal;
     public event Action OnDie;
 
     private SpriteRenderer sr;//возможно в будущем придется сделать отдельный скрипт для покраски мобов
@@ -33,6 +37,17 @@ public class HealthComponent : MonoBehaviour
         }
     }
 
+    public void Healing(float heal)
+    {
+        health += heal;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        Debug.Log($"отхил. теперь здоровья - {health}");
+        OnHeal?.Invoke();
+    }
+
     public void Die()
     {
         //Debug.Log($"умер");
@@ -45,11 +60,5 @@ public class HealthComponent : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

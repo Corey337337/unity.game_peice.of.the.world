@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4952454942383526857}
   - component: {fileID: -3937127748034676104}
   - component: {fileID: -1301509605790578124}
+  - component: {fileID: 1709308161849191793}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e8dd8db4797d249b307959189521b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Prop
-  weight: 60
+  weight: 80
 --- !u!114 &-3937127748034676104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +166,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8445897, y: 0.8299875}
   m_EdgeRadius: 0
+--- !u!114 &1709308161849191793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859675051963090067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedf0117c2cc91c4a96a9bee2c36190e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tree
+  applePrefab: {fileID: 2111303788048433668, guid: fc766ef6f9ff3644f82fce6978825310, type: 3}
+  spawnChance: 0.05

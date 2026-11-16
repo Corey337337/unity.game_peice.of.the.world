@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3827824388653445299}
   - component: {fileID: 5252304640237442120}
   - component: {fileID: 4719333487089538617}
+  - component: {fileID: 5050384425115038050}
   m_Layer: 0
   m_Name: Slimeball
   m_TagString: Untagged
@@ -143,3 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   data: {fileID: 11400000, guid: 747ddda21b95c064a8ae07b8a376221f, type: 2}
   count: 1
+--- !u!114 &5050384425115038050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582647899847203073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90518ed8bd6a3c94698c5f7947175763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChunkDespawn

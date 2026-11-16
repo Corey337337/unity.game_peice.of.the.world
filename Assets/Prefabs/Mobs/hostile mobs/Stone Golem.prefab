@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 6354310499518327892}
   - component: {fileID: 6323489190773470777}
   - component: {fileID: -4229671432579735245}
+  - component: {fileID: 4331710118479027831}
   m_Layer: 0
   m_Name: Stone Golem
   m_TagString: Untagged
@@ -307,7 +308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::XP_GiverComponent
   xp: 20
-  leveling: {fileID: 3342250941947853551, guid: 6d48d67e319f1b4468dc37d891290fce, type: 3}
 --- !u!114 &896925311712770726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +358,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlammableComponent
   isBurning: 0
+--- !u!95 &4331710118479027831
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455881575321002472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c592ab9c03fa92f439ba66f7d7684b8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5566900983956319875
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class PlayerInput : MonoBehaviour
 
     public AttackComponent attacker;
 
+    public ItemUserComponent user;
+
     public void MovementInput()
     {
         float x = Input.GetAxisRaw("Horizontal");
@@ -25,6 +27,14 @@ public class PlayerInput : MonoBehaviour
         
     }
 
+    public void UseItemInput()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            user.UseItem();
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -32,5 +42,7 @@ public class PlayerInput : MonoBehaviour
         MovementInput();
 
         AttackInput();
+
+        UseItemInput();
     }
 }

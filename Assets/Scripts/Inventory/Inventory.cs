@@ -10,7 +10,6 @@ public class Inventory : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Inventory Awake, size = " + size, this);
         slots = new InventorySlot[size];
         for(int i = 0; i < size; i++)
         {
@@ -61,5 +60,18 @@ public class Inventory : MonoBehaviour
 
     }
 
+    //эксперимент
+    public void RemoveItem()
+    {
+        foreach (var s in slots)
+        {
+            if (s.count <= 0 && !s.IsEmpty)
+            {
+                s.item = null;
+            }
+        }
+        OnChanged?.Invoke();
+        
+    }
 
 }
