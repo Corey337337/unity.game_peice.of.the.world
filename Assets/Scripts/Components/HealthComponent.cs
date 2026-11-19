@@ -28,7 +28,7 @@ public class HealthComponent : MonoBehaviour
     {
         health -= damage;
         StartCoroutine(ColorRoutine());
-        Debug.Log($"осталось здоровья - {health}");
+        //Debug.Log($"осталось здоровья - {health}");
         OnTakeDamage?.Invoke();
 
         if (health <= 0)
@@ -60,5 +60,6 @@ public class HealthComponent : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        health = maxHealth;
     }
 }

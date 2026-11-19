@@ -12,8 +12,8 @@ public class ItemUserComponent : MonoBehaviour
             return;
         }
         var slot = inventoryUI.SelectedSlot;
-        slot.item.Use();
-        slot.count -= 1; //<-- это слишком общее, надо поменять и уменьшение
+        slot.item.Use(gameObject, slot);
+        //slot.count -= 1; //<-- это слишком общее, надо поменять и уменьшение
                  //количествва сделать только от скриптов самих предметов
 
 

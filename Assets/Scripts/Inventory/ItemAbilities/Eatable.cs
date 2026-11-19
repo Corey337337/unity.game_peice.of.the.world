@@ -1,40 +1,36 @@
 using UnityEngine;
 
-public class Eatable : MonoBehaviour
+[CreateAssetMenu(menuName = "Inventory/Abilities/Eatable")]
+public class Eatable : ItemAbility
 {
     public float heal;
 
-    public ItemData item;
+    //public ItemData item;
 
-    public GameObject user; //по факту только игрок
+    //public GameObject user; //по факту только игрок
 
-    public void Eat() //доделать
+    public override void Use(GameObject user, InventorySlot slot) //доделать
     {
         var hp = user.GetComponent<HealthComponent>();
         if (hp.health < hp.maxHealth)
         {
-            user.GetComponent<HealthComponent>().Healing(heal);
-            InventorySlot[] slots = user.GetComponent<Inventory>().slots;
+            hp.Healing(heal);
+            slot.count--;
+            Debug.Log($"Предмет потратился");
 
-            foreach (var s in slots)
-            {
-                if (s.item == item)
-                {
-                    s.count -= 1;
-                }
-                break;
-            }
-        }  
+        }
     }
 
 
-    private void OnEnable()
-    {
-        item.OnUse += Eat;
-    }
+    //private void OnEnable()
+    //{
+    //    item.OnUse += Eat;
+    //    Debug.Log($"Предмет родился");
+    //}
 
-    private void OnDisable()
-    {
-        item.OnUse -= Eat;
-    }
+    //private void OnDisable()
+    //{
+    //    item.OnUse -= Eat;
+    //    Debug.Log($"Предмет умер");
+    //}
 }

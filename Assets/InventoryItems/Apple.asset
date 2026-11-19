@@ -17,3 +17,5 @@ MonoBehaviour:
   stackable: 1
   maxStack: 99
   description: 
+  abilities:
+  - {fileID: 11400000, guid: c1ef25860fc92f9498649db5feb0ce1e, type: 2}

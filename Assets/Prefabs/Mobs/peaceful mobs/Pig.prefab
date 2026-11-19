@@ -199,7 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  health: 15
+  maxHealth: 15
+  health: 0
 --- !u!114 &3907537520298768139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +217,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 255431096594389148}
   LastDirection: {x: 1, y: 0}
   direction: {x: 0, y: 0}
+  animator: {fileID: 0}
 --- !u!114 &1211875151172302829
 MonoBehaviour:
   m_ObjectHideFlags: 0

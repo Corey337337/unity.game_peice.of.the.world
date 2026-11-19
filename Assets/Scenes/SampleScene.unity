@@ -821,6 +821,7 @@ MonoBehaviour:
   damage: 0
   cooldown: 0
   activeTime: 0
+  animator: {fileID: 0}
 --- !u!114 &718775084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,6 +852,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 718775089}
   LastDirection: {x: 1, y: 0}
   direction: {x: 0, y: 0}
+  animator: {fileID: 0}
 --- !u!114 &718775086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1881,7 +1883,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7614855223736957158, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
-      propertyPath: health
+      propertyPath: maxHealth
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 179072552017861688, guid: d4aa17709231dfd40bfce7488f55a280, type: 3}
@@ -2520,6 +2522,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3285175194068287489}
   LastDirection: {x: 1, y: 0}
   direction: {x: 0, y: 0}
+  animator: {fileID: 0}
 --- !u!4 &1813377839905325260
 Transform:
   m_ObjectHideFlags: 0

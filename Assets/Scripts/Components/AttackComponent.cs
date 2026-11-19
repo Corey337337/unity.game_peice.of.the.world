@@ -14,6 +14,8 @@ public class AttackComponent : MonoBehaviour
 
     public event Action<GameObject> OnHit;
 
+    public Animator animator;
+
     private float nextAttackTime;
    
 
@@ -33,7 +35,10 @@ public class AttackComponent : MonoBehaviour
     private IEnumerator AttackRoutine()
     {
         isAttack = true;
-        //Debug.Log("атакую!!!");
+        //if(animator != null)
+        //{
+        //    animator.SetTrigger("isAttack");
+        //}  
         yield return new WaitForSeconds(activeTime);
         isAttack = false;
     }
@@ -47,6 +52,7 @@ public class AttackComponent : MonoBehaviour
             if (health != null)
             {
                 float finalDamage = damage;
+                Debug.Log($"СНАЧАОА УРОН - {finalDamage}");
 
                 if (critComponent != null) 
                 {
@@ -54,6 +60,7 @@ public class AttackComponent : MonoBehaviour
                 }
 
                 health.TakeDamage(finalDamage);
+                Debug.Log($"ПОТОМ Я НАНЕС - {finalDamage}");
                 OnHit?.Invoke(other.gameObject);
 
                 isAttack = false;
@@ -65,11 +72,6 @@ public class AttackComponent : MonoBehaviour
     void Start()
     {
         critComponent = GetComponent<CritComponent>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        animator = GetComponent<Animator>();
     }
 }

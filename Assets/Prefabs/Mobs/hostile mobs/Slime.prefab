@@ -205,7 +205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691657a39fe58704683d0da15c7bd8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  health: 30
+  maxHealth: 30
+  health: 0
 --- !u!114 &561678420253506130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +223,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1786275481398236468}
   LastDirection: {x: 1, y: 0}
   direction: {x: 0, y: 0}
+  animator: {fileID: 0}
 --- !u!114 &2089246663218769740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +253,7 @@ MonoBehaviour:
   damage: 10
   cooldown: 2
   activeTime: 0.1
+  animator: {fileID: 0}
 --- !u!114 &4950983295956157318
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
-using UnityEngine;
 using System;
+using UnityEngine;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 [CreateAssetMenu(menuName = "Inventory/Item")]
 public class ItemData : ScriptableObject
@@ -11,12 +12,14 @@ public class ItemData : ScriptableObject
     [TextArea] public string description;
 
 
-    public event Action OnUse;
+    //public event Action OnUse;
+    public ItemAbility[] abilities;
 
-    public void Use()
+    public void Use(GameObject user, InventorySlot slot)
     {
         Debug.Log($"Использовали предмет: {itemName}");
-        OnUse?.Invoke(); //подписчики это срипты абилок самого предмета
+        foreach (var a in abilities)
+            a.Use(user, slot);
     }
 
 }

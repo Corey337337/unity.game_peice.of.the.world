@@ -12,12 +12,18 @@ public class MoverComponent : MonoBehaviour
     public Vector2 direction;
 
 
+    public Animator animator;
+
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
         if (direction != Vector2.zero)
         {
             LastDirection = direction;
+            //if (animator != null)
+            //{
+            //    animator.SetTrigger("isMoving");
+            //}
         }
 
         if (dir.x != 0)
@@ -30,12 +36,14 @@ public class MoverComponent : MonoBehaviour
             {
                 spriteRenderer.flipX = false;
             }
+
         }
     }
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
 
