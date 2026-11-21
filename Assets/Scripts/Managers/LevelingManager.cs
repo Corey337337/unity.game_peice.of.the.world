@@ -11,7 +11,9 @@ public class LevelingManager : MonoBehaviour
     public int currentXP = 0;
     public const int MaxLevel = 30;
 
-    public event Action<int> OnLevelUp;
+    public event Action OnPlusXP;
+    //public event Action<int> OnLevelUp;
+    public event Action OnLevelUp2;
 
     private void Awake()
     {
@@ -22,12 +24,14 @@ public class LevelingManager : MonoBehaviour
     {
         totalXP += xp;
         currentXP += xp;
+        OnPlusXP?.Invoke();
 
         while (level < MaxLevel && currentXP >= XpToNextLevel())
         {
             currentXP -= XpToNextLevel();
             level++;
-            OnLevelUp?.Invoke(level);
+            OnLevelUp2?.Invoke();
+            //OnLevelUp?.Invoke(level);
             Debug.Log($"Новый уровень: {level}");
         }
 

@@ -31,4 +31,19 @@ public static class WorldStorage
         }
 
     }
+
+    static string WorldDataPath(string worldId) => Path.Combine(WorldsDir, worldId + ".json");
+
+    public static WorldSaveData LoadWorldData(string worldId)
+    {
+        string path = WorldDataPath(worldId);
+        if (!File.Exists(path)) return new WorldSaveData(); 
+        return JsonUtility.FromJson<WorldSaveData>(File.ReadAllText(path));
+    }
+
+    public static void SaveWorldData(string worldId, WorldSaveData data)
+    {
+        Directory.CreateDirectory(WorldsDir);
+        File.WriteAllText(WorldDataPath(worldId), JsonUtility.ToJson(data, true));
+    }
 }

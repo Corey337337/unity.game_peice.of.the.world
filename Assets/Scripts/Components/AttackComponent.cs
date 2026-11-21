@@ -52,7 +52,7 @@ public class AttackComponent : MonoBehaviour
             if (health != null)
             {
                 float finalDamage = damage;
-                Debug.Log($"СНАЧАОА УРОН - {finalDamage}");
+
 
                 if (critComponent != null) 
                 {
@@ -60,7 +60,7 @@ public class AttackComponent : MonoBehaviour
                 }
 
                 health.TakeDamage(finalDamage);
-                Debug.Log($"ПОТОМ Я НАНЕС - {finalDamage}");
+
                 OnHit?.Invoke(other.gameObject);
 
                 isAttack = false;
